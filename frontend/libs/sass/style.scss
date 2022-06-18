@@ -1,0 +1,45 @@
+$primary : #0D6EFD;
+$secondary : #6C757D;
+$success : #198754;
+$info : #0DCAF0;
+$warning : #FFC107;
+$danger : #DC3545;
+$light : #F8F9FA;
+$dark : #212529;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// Variaveis de cores personalizadas
+$cm-primary : #0D6EFD;
+$cm-secondary : #6C757D;
+$cm-success : #198754;
+$cm-info : #0DCAF0;
+$cm-warning : #FFC107;
+$cm-danger : #DC3545;
+$cm-light : #F8F9FA;
+$cm-dark : #212529;
+
+// Tema com cores pesonalizadas
+$custom-colors: (
+  "cm-primary":    $cm-primary,
+  "cm-secondary":  $cm-secondary,
+  "cm-success":    $cm-success,
+  "cm-info":       $cm-info,
+  "cm-warning":    $cm-warning,
+  "cm-danger":     $cm-danger,
+  "cm-light":      $cm-light,
+  "cm-dark":       $cm-dark
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import  "~bootstrap/scss/bootstrap"
