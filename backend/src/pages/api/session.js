@@ -1,6 +1,6 @@
-import { db } from '../../db';
-import { authService } from '../../src/services/authService';
-import { getTokenFromHeaders } from '../../src/utils/getTokenFromHeaders';
+import { db } from '../../../db';
+import { authService } from '../services/authService';
+import { getTokenFromHeaders } from '../utils/getTokenFromHeaders';
 
 const sessionController = {
   async getSession(req, res) {

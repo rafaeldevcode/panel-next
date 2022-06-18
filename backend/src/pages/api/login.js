@@ -1,5 +1,5 @@
-import { db } from '../../db';
-import { authService } from '../../src/services/authService';
+import { db } from '../../../db';
+import { authService } from '../services/authService';
 
 const controllers = {
   async login(req, res) {
