@@ -5,6 +5,7 @@ import siteconfig from '../../../../config/siteconfig.json';
 import { showPass, getFields } from "../../../services/validitForm";
 import Link from 'next/link';
 import Image from 'next/image';
+import Message from "../../../partials/message";
 
 export default function LoginScreen(){
     const router = useRouter();
@@ -109,7 +110,16 @@ export default function LoginScreen(){
                 // router.push('/admin/dashboard');
             })
             .catch((error) => {
-                console.log(error)
+                const div = document.createElement('div');
+                    div.setAttribute('class', 'position-fixed end-0 top-0 m-2 p-2 border border-cm-danger border-4 rounded');
+
+                const message = document.createElement('p');
+                    message.setAttribute('class', 'm-0 text-cm-danger');
+                    message.innerHTML = 'Usuário ou senha inválidos!';
+
+                    div.appendChild(message);
+
+                    document.querySelector('body').appendChild(div);
             })
     }; 
 }
