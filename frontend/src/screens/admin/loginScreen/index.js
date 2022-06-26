@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { authService } from '../../services/auth/authService';
-import siteconfig from '../../../config/siteconfig.json';
+import { authService } from '../../../services/auth/authService';
+import siteconfig from '../../../../config/siteconfig.json';
 
 export default function LoginScreen(){
     const router = useRouter();
