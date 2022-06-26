@@ -8,6 +8,16 @@
     font-size: 16px
     box-sizing: border-box
 
+::-webkit-scrollbar
+    width: 8px
+
+::-webkit-scrollbar-track
+    background: $cm-light
+
+::-webkit-scrollbar-thumb
+    background: $cm-primary
+    border-radius: 10px
+
 // Painel de login
 .image-bg-login
     min-width: 100%
@@ -58,6 +68,13 @@ span[data-valid="true"]
 
 .btn-show-pass:focus
     box-shadow: none
+
+// Animação da mensagem ao validar usuário e senha
+div[data-message="true"]
+    animation: 1s showMessage ease-out
+
+div[data-message="false"]
+    animation: 1s hiddeMessage ease-out forwards
 
 @import  ./_mediaQueries
 @import ./_keyFrames
