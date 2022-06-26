@@ -84,9 +84,9 @@ Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 Mencione as ferramentas que você usou para criar seu projeto
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+* [Next JS](https://nextjs.org/docs) - Fremework
+* [Next Swagger](https://www.npmjs.com/package/next-swagger-doc) - API
+* [Git](https://git-scm.com/doc) - Gerenciador de versão
 
 <!-- ## 🖇️ Colaborando
 
@@ -113,4 +113,4 @@ Este projeto está sob a licença (MIT) - veja o arquivo [LICENSE.md](https://gi
 
 
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://github.com/rafaeldevcode) 😊
+⌨️ com ❤️ por [Rafael Vieira](https://github.com/rafaeldevcode) 😊
