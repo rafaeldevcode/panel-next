@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { authService } from '../../../services/auth/authService';
 import siteconfig from '../../../../config/siteconfig.json';
 import { showPass, getFields } from "../../../services/validitForm";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function LoginScreen(){
     const router = useRouter();
@@ -31,7 +33,14 @@ export default function LoginScreen(){
 
             <div className='d-flex flex-column justify-content-center align-items-center col-12 col-lg-5 p-2'>
                 <div className='col-12 col-sm-6 mb-5'>
-                    <img className='w-100' src={siteconfig.site.logo.src} alt={siteconfig.site.description} />
+                    <Image 
+                        src={siteconfig.site.logo.src} 
+                        alt={siteconfig.site.description}
+                        width={500}
+                        height={84}
+                        layout='responsive'
+                        // placeholder='blur'
+                    />
                 </div>
 
                 <form className='col-12 col-sm-6' onSubmit={sendLogin}>
@@ -58,10 +67,14 @@ export default function LoginScreen(){
                         
                         <ul className='d-flex flex-nowrap justify-content-between ps-0'>
                             <li>
-                                <a href="#" className='text-cm-primary' title="Realizar cadastro">Realizar cadastro</a>
+                                <Link href="#" passHref>
+                                    <a className='text-cm-primary' title="Realizar cadastro">Realizar cadastro</a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className='text-cm-primary' title="Esqueci minha senha">Esqueci minha senha</a>
+                                <Link href="#" passHref>
+                                    <a className='text-cm-primary' title="Esqueci minha senha">Esqueci minha senha</a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
