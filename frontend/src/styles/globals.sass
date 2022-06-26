@@ -1,3 +1,5 @@
+@import ./_variables
+    
 *
     margin: 0
     padding: 0
@@ -22,6 +24,40 @@
         height: 100%
         background: #00000059
 
-@media only screen and ( max-width: 992px )
-    .section-image-login
-        display: none
+label
+    transition: all .4s
+
+.validit-custom
+    &:focus
+        box-shadow: none
+
+        & ~ label
+            transform: translateY(-21px)
+            background: $cm-light
+            font-size: .9rem
+
+    &:valid ~ label
+        transform: translateY(-21px)
+        background: $cm-light
+        font-size: .9rem
+
+span[data-valid="false"]
+    color: $cm-danger
+    animation: showError .4s linear forwards
+
+span[data-valid="true"]
+    color: $cm-success
+    animation: showSuccess .4s linear forwards
+
+.validit
+    font-size: .8rem
+    z-index: -1
+
+    i
+        font-size: .8rem
+
+.btn-show-pass:focus
+    box-shadow: none
+
+@import  ./_mediaQueries
+@import ./_keyFrames

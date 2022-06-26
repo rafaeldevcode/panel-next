@@ -1,12 +1,16 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { authService } from '../../../services/auth/authService';
 import siteconfig from '../../../../config/siteconfig.json';
+import { showPass, getFields } from "../../../services/validitForm";
 
 export default function LoginScreen(){
     const router = useRouter();
-
     const [values, setValues] = useState();
+
+    useEffect(()=>{
+        getFields();
+    }, []);
     
     return (
         <section className="vh-100 vw-100 d-flex flex-nowrap">
@@ -33,21 +37,23 @@ export default function LoginScreen(){
                 <form className='col-12 col-sm-6' onSubmit={sendLogin}>
                     <div className='d-flex flex-column position-relative my-4'>
                         <i className='bi bi-person-fill position-absolute m-2' />
-                        <input className='form-control positio ps-4 py-2' type='text' name='username' id='username' required onChange={handleChange}/>
-                        <label className='position-absolute ms-4 my-2' htmlFor="username">Usuário</label>
+                        <input className='form-control ps-4 py-2 validit-custom' type='text' name='username' id='username' required onChange={handleChange}/>
+                        <label className='position-absolute ms-4 my-2 px-2' htmlFor="username">Usuário</label>
+                        <span className='position-absolute end-0 bottom-0 validit'></span>
                     </div>
 
                     <div className='d-flex flex-column position-relative my-4'>
                         <i className='bi bi-lock-fill position-absolute m-2' />
-                        <input className='form-control ps-4 py-2' type='password' name='password' id='password' required onChange={handleChange}/>
-                        <button type='button' title='Exibir senha' className='btn btn-sm position-absolute end-0 h-100' onClick={showPass}><i id='iconPass' className='bi bi-eye-fill'/></button>
-                        <label className='position-absolute ms-4 my-2' htmlFor="password">Senha</label>
+                        <input className='form-control ps-4 py-2 validit-custom' type='password' name='password' id='password' required onChange={handleChange}/>
+                        <button type='button' title='Exibir senha' className='btn btn-sm btn-show-pass position-absolute end-0 h-100' onClick={showPass}><i id='iconPass' className='bi bi-eye-fill'/></button>
+                        <label className='position-absolute ms-4 my-2 px-2' htmlFor="password">Senha</label>
+                        <span className='position-absolute end-0 bottom-0 validit'></span>
                     </div>
 
                     <div className='my-4'>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="remember" />
-                            <label class="form-check-label" htmlFor="remember">Mantenha-me conectado</label>
+                        <div className='form-check form-switch'>
+                            <input className='form-check-input' type='checkbox' id='remember' />
+                            <label className='form-check-label' htmlFor='remember'>Mantenha-me conectado</label>
                         </div>
                         
                         <ul className='d-flex flex-nowrap justify-content-between ps-0'>
@@ -91,21 +97,5 @@ export default function LoginScreen(){
             .catch((error) => {
                 console.log(error)
             })
-    };
-
-    function showPass(event){
-        event.preventDefault();
-        const inputPass = document.getElementById('password');
-        const icone = document.getElementById('iconPass');
-
-        if(inputPass.type === 'password'){
-            inputPass.setAttribute('type', 'text');
-            inputPass.classList.remove('bi-eye-fill');
-            icone.classList.add('bi-eye-slash-fill');
-        }else{
-            inputPass.setAttribute('type', 'password');
-            icone.classList.remove('bi-eye-slash-fill');
-            icone.classList.add('bi-eye-fill');
-        }
-    }
+    }; 
 }

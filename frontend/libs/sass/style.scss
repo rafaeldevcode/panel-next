@@ -1,3 +1,4 @@
+// Variaveis originais do bootstrap
 $primary : #0D6EFD;
 $secondary : #6C757D;
 $success : #198754;
@@ -7,6 +8,7 @@ $danger : #DC3545;
 $light : #F8F9FA;
 $dark : #212529;
 
+// Tema com cores originais do bootstrap
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
@@ -18,14 +20,14 @@ $theme-colors: (
   "dark":       $dark
 );
 
-// Variaveis de cores personalizadas
+// Variaveis customizadas
 $cm-primary : #3695FF;
 $cm-secondary : #6C757D;
-$cm-success : #198754;
+$cm-success : #008000;
 $cm-info : #0DCAF0;
-$cm-warning : #FFC107;
-$cm-danger : #DC3545;
-$cm-light : #F8F9FA;
+$cm-warning : #FFFF00;
+$cm-danger : #FF0000;
+$cm-light : #FFFFFF;
 $cm-dark : #000000;
 
 // Tema com cores pesonalizadas
