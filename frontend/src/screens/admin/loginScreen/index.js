@@ -39,7 +39,8 @@ export default function LoginScreen(){
                         width={500}
                         height={84}
                         layout='responsive'
-                        // placeholder='blur'
+                        placeholder='blur'
+                        blurDataURL='/assets/images/default.png'
                     />
                 </div>
 
