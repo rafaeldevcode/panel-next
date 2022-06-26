@@ -5,7 +5,6 @@ import siteconfig from '../../../../config/siteconfig.json';
 import { showPass, getFields } from "../../../services/validitForm";
 import Link from 'next/link';
 import Image from 'next/image';
-import Message from "../../../partials/message";
 
 export default function LoginScreen(){
     const router = useRouter();
@@ -104,12 +103,15 @@ export default function LoginScreen(){
     function sendLogin(event){
         event.preventDefault();
         authService
-            .login(values.username, values.password)
-            .then((res) => {
-                cosole.log(res.json())
-                // router.push('/admin/dashboard');
+            .login({
+                username: values.username,
+                password: values.password
             })
-            .catch((error) => {
+            .then(() => {
+                
+                router.push('/admin/dashboard');
+            })
+            .catch(() => {
                 const div = document.createElement('div');
                     div.setAttribute('class', 'position-fixed end-0 top-0 m-2 p-2 border border-cm-danger border-4 rounded');
                     div.setAttribute('data-message', 'true');

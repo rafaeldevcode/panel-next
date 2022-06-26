@@ -3,7 +3,7 @@ import { authService } from '../../services/authService';
 
 const controllers = {
     async login(req, res) {
-        const { username, password } = req.body;
+        const { username, password } = JSON.parse(req.body);
 
         db.users.findOne({ username, password }, async function (err, user) {
             if (err) res.status(500).json({ error: { status: 500, message: 'Internal Server Error' } });
