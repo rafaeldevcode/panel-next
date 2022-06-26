@@ -2,48 +2,46 @@ import { v4 as uuid } from 'uuid';
 import { db } from '../../../db';
 
 const userController = {
-  getAll(_, res) {
-    db.users.find({}, function (err, docs) {
-      res.status(200).json({
-        data: {
-          users: docs,
-        }
-      });
-    });
-  },
-  create(req, res) {
-    const newUser = {
-      username: req.body.username,
-      password: 'safepassword',
-      name: req.body.name,
-      email: req.body.email,
-    };
-
-    db.users.insert(newUser, function(err) {
-      if(err) {
-        res.status(400).json({
-          error: {
-            status: 400,
-            message: 'User already exists'
-          }
+    getAll(_, res) {
+        db.users.find({}, function (err, docs) {
+            res.status(200).json({
+                data: {
+                    users: docs,
+                }
+            });
         });
-      }
+    },
+    create(req, res) {
+        const newUser = {
+            username: req.body.username,
+            password: 'safepassword',
+            name: req.body.name,
+            email: req.body.email,
+        };
 
-      res.status(201).json({
-        data: {
-          user: newUser,
-        }
-      });
-    });
+        db.users.insert(newUser, function(err) {
+            if(err) {
+                res.status(400).json({
+                    error: {
+                        status: 400,
+                        message: 'User already exists'
+                    }
+                });
+            }
 
-
-  }
+            res.status(201).json({
+                data: {
+                    user: newUser,
+                }
+            });
+        });
+    }
 }
 
 
 const controllerBy = {
-  GET: userController.getAll,
-  POST: userController.create,
+    GET: userController.getAll,
+    POST: userController.create,
 }
 
 /**
@@ -80,12 +78,12 @@ const controllerBy = {
  *         description: User created with success
  */
 export default function handle(req, res) {
-  if (controllerBy[req.method]) return controllerBy[req.method](req, res);
+    if (controllerBy[req.method]) return controllerBy[req.method](req, res);
 
-  res.status(404).json({
-    error: {
-      status: 404,
-      message: 'Not Found'
-    }
-  });
+    res.status(404).json({
+        error: {
+            status: 404,
+            message: 'Not Found'
+        }
+    });
 }

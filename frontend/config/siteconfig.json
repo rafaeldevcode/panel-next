@@ -1,0 +1,14 @@
+{
+    "site": {
+        "name": "Meu painel de login",
+        "description": "Faça su login!",
+        "logo": {
+            "src": "/assets/images/logo.png",
+            "type": "png"
+        },
+        "favicon": {
+            "src": "/assets/images/favicon.png",
+            "type": "png"
+        }
+    }
+}

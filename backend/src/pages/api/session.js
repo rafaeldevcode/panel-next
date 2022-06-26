@@ -1,51 +1,51 @@
 import { db } from '../../../db';
-import { authService } from '../services/authService';
-import { getTokenFromHeaders } from '../utils/getTokenFromHeaders';
+import { authService } from '../../services/authService';
+import { getTokenFromHeaders } from '../../utils/getTokenFromHeaders';
 
 const sessionController = {
-  async getSession(req, res) {
-    const token = getTokenFromHeaders(req);
+    async getSession(req, res) {
+        const token = getTokenFromHeaders(req);
 
-    if(!token) return res.status(401).json({ error: { status: 401, message: 'You don\'t have credentials' } });
+        if(!token) return res.status(401).json({ error: { status: 401, message: 'You don\'t have credentials' } });
 
-    try {
-      await authService.validateAccessToken(token);
-      const decodedToken = await authService.decodeToken(token);
+        try {
+            await authService.validateAccessToken(token);
+            const decodedToken = await authService.decodeToken(token);
 
-      db.users.findOne({ _id: decodedToken.sub }, function (err, user) {
-        if (err || user === null) {
-          res.status(401).json({
-            error: {
-              status: 401,
-              message: 'Invalid access token, please login again.',
-            }
-          });
-        }
+            db.users.findOne({ _id: decodedToken.sub }, function (err, user) {
+                if (err || user === null) {
+                    res.status(401).json({
+                        error: {
+                            status: 401,
+                            message: 'Invalid access token, please login again.',
+                        }
+                    });
+                }
 
-        res.status(200).json({
-          data: {
-            user: {
-              username: user.username,
-              email: user.email,
-            },
-            id: decodedToken.sub,
-            roles: decodedToken.roles,
-          }
+            res.status(200).json({
+                data: {
+                    user: {
+                        username: user.username,
+                        email: user.email,
+                    },
+                    id: decodedToken.sub,
+                    roles: decodedToken.roles,
+                }
+            });
         });
-      });
 
-    } catch(err) {
-      res.status(401).json({
-          status: 401,
-          message: 'Your access token is not valid, so you are not able to get a session.',
-      });
-    }
-  },
+        } catch(err) {
+            res.status(401).json({
+                status: 401,
+                message: 'Your access token is not valid, so you are not able to get a session.',
+            });
+        }
+    },
 };
 
 const controllerBy = {
-  GET: sessionController.getSession,
-  OPTIONS: (_, res) => res.send('OK'),
+    GET: sessionController.getSession,
+    OPTIONS: (_, res) => res.send('OK'),
 }
 
 /**
@@ -68,10 +68,10 @@ const controllerBy = {
  *         description: You are not authorized to get a session
  */
 export default function handle(req, res) {
-  if (controllerBy[req.method]) return controllerBy[req.method](req, res);
+    if (controllerBy[req.method]) return controllerBy[req.method](req, res);
 
-  res.status(404).json({
-    status: 404,
-    message: 'Not Found'
-  });
+    res.status(404).json({
+        status: 404,
+        message: 'Not Found'
+    });
 }
