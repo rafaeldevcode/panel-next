@@ -65,6 +65,9 @@ function validateField(field){
             },
             password: {
                 valueMissing: valueMissing
+            },
+            number: {
+                valueMissing: valueMissing
             }
         };
 
