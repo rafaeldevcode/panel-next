@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getFields } from "../../../services/validitForm";
+import { createMessage } from '../../../services/createMessage';
 
 export default function verifyEmailScreen(){
     const router = useRouter();
@@ -46,6 +47,10 @@ export default function verifyEmailScreen(){
     function verifyEmail(event){
         event.preventDefault();
 
-        console.log(value.verify_email);
+        if(value.verify_email === '123456'){
+            router.push('/admin/dashboard');
+        }else{
+            createMessage('Token incorreto, verifique e tente novamente!', 'danger');
+        }
     }
 }

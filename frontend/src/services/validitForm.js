@@ -1,7 +1,7 @@
 export const showPass = (event) => {
     event.preventDefault();
-    const inputPass = document.getElementById('password');
-    const icone = document.getElementById('iconPass');
+    const inputPass = event.target.parentNode.parentNode.querySelector('input');
+    const icone = event.target;
 
     if(inputPass.type === 'password'){
         inputPass.setAttribute('type', 'text');
