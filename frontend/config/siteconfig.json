@@ -3,8 +3,18 @@
         "name": "Meu painel de login",
         "description": "Faça su login!",
         "logo": {
-            "src": "/assets/images/logo.png",
-            "type": "png"
+            "logo": {
+                "src": "/assets/images/logo.png",
+                "type": "png",
+                "width": 500,
+                "height": 84
+            },
+            "logo-white": {
+                "src": "/assets/images/logo-white.png",
+                "type": "png",
+                "width": 500,
+                "height": 84
+            }
         },
         "favicon": {
             "src": "/assets/images/favicon.png",

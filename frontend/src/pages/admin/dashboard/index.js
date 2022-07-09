@@ -1,4 +1,5 @@
-import { tokenService } from "../../../services/auth/tokenService"
+import { tokenService } from "../../../services/auth/tokenService";
+import DashboardScreen from "../../../screens/admin/dashboardScreen";
 
 export async function getServerSideProps(ctx){
     const token = tokenService.get(ctx);
@@ -10,11 +11,4 @@ export async function getServerSideProps(ctx){
     }
 }
 
-export default function Dashboard(props){
-    return (
-        <>
-            <h1>Dashboard</h1>
-            <p>Token: {props.token}</p>
-        </>
-    )
-}
+export default DashboardScreen;

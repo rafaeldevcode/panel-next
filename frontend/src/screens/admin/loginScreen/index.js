@@ -25,7 +25,7 @@ export default function LoginScreen(){
 
             <div className='d-flex flex-column justify-content-center align-items-center col-12 col-lg-5 p-2'>
                 <div className='col-12 col-sm-6 mb-5'>
-                    <Logo />
+                    <Logo image='logo' />
                 </div>
 
                 <form className='col-12 col-sm-6' onSubmit={sendLogin}>
