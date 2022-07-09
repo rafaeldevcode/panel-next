@@ -1,3 +1,3 @@
-import verifyEmailScreen from "../../../screens/admin/verifyEmailScreen";
+import VerifyEmailScreen from "../../../screens/admin/verifyEmailScreen";
 
-export default verifyEmailScreen;
+export default VerifyEmailScreen;

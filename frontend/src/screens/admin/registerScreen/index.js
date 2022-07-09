@@ -29,13 +29,13 @@ export default function RegisterScreen(){
                 </div>
 
                 <form className='col-12 col-sm-6' onSubmit={createUser}>
-                    <InputText label='Nome' name='name' icone='bi bi-person-fill position-absolute' onChange={handleChange} />
+                    <InputText label='Nome' name='name' icone='bi bi-person-fill' required onChange={handleChange} />
 
-                    <InputEmail label='Email' name='email' icone='bi bi-envelope-fill position-absolute' onChange={handleChange} />
+                    <InputEmail label='Email' name='email' icone='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
 
-                    <InputPass label='Senha' name='password' onChange={handleChange} />
+                    <InputPass label='Senha' name='password' required onChange={handleChange} />
 
-                    <InputPass label='Confirme sua senha' name='confirm_password' onChange={handleChange} />
+                    <InputPass label='Confirme sua senha' required name='confirm_password' onChange={handleChange} />
 
                     <div className='my-4'>
                         <InputCheckboxSwitch label='Mantenha-me conectado' name='remember' />

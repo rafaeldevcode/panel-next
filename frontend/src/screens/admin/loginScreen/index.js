@@ -29,9 +29,9 @@ export default function LoginScreen(){
                 </div>
 
                 <form className='col-12 col-sm-6' onSubmit={sendLogin}>
-                    <InputText label='Usuário' name='username' icone='bi bi-person-fill position-absolute' onChange={handleChange} />
+                    <InputText label='Usuário' name='username' icone='bi bi-person-fill' required onChange={handleChange} />
 
-                    <InputPass label='Senha' name='password' onChange={handleChange} />
+                    <InputPass label='Senha' name='password' required onChange={handleChange} />
 
                     <div className='my-4'>
                         <InputCheckboxSwitch label='Mantenha-me conectado' name='remember' />
@@ -43,7 +43,7 @@ export default function LoginScreen(){
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/admin/reset-password" passHref>
+                                <Link href="/admin/reset-password?insert=email" passHref>
                                     <a className='text-cm-primary' title="Esqueci minha senha">Esqueci minha senha</a>
                                 </Link>
                             </li>
