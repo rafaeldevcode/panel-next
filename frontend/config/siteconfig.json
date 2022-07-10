@@ -19,6 +19,18 @@
         "favicon": {
             "src": "/assets/images/favicon.png",
             "type": "png"
+        },
+        "navsidebar": {
+            "1": {
+                "text": "Usuários",
+                "href": "/admin/users",
+                "icone": "bi bi-people-fill"
+            },
+            "2": {
+                "text": "Permissões",
+                "href": "/admin/permissions",
+                "icone": "bi bi-file-earmark-lock-fill"
+            }
         }
     }
 }

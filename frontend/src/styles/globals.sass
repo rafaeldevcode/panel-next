@@ -100,15 +100,18 @@ div[data-message="false"]
 .btn-profile:focus
     box-shadow: none
 
-.sidebar
-    min-width: 230px
-
 .user
     width: 45px
     height: 45px
 
     img
         border-radius: 50%
+
+aside[data-expanded='false']
+    animation: toRecalldAside .4s .2s ease-in-out forwards
+
+aside[data-expanded='true']
+    animation: expandedAside .4s ease-in-out forwards
 
 // Menu sandwiche
 .menu
@@ -148,6 +151,30 @@ div[data-message="false"]
             transform: rotate(25deg)
             width: 60%
             top: 11px
+
+// Menu sidebar
+.nav-icon
+    width: 45px
+
+.hiddeItem
+    opacity: 0
+
+.dNone
+    display: none
+
+.itemNavSidbar
+    // border: 1px solid transparent
+    transition: all .4s
+
+    &:hover
+        background: $cm-primary
+
+div[data-item-active='false']
+    animation: hiddeItem .2s linear forwards
+
+div[data-item-active='true']
+    display: block
+    animation: showItem .2s .4s linear forwards
 
 @import  ./_mediaQueries
 @import ./_keyFrames

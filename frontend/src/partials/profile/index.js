@@ -16,7 +16,7 @@ export default function Profile(){
                     className='border border-cm-primary'
                 />
             </div>
-            <div className='btn-group'>
+            <div className='btn-group hiddeItem dNone'  data-item-active='false'>
                 <button type='button' title='Perfil' className='btn btn-profile w-100 dropdown-toggle text-cm-light fw-bold' data-bs-toggle='dropdown' aria-expanded='false'>
                     Rafael Vieira
                 </button>
@@ -33,7 +33,7 @@ export default function Profile(){
                         <Link href='/admin/login' passHref>
                             <a className='dropdown-item d-flex flex-row justify-content-between'>
                                 Logout
-                                <i class='bi bi-box-arrow-right' />
+                                <i className='bi bi-box-arrow-right' />
                             </a>
                         </Link>
                     </li>
