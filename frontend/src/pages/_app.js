@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import siteconfig from '../../config/siteconfig.json';
 import '../styles/globals.sass';
 
@@ -11,6 +12,7 @@ export default function MyApp({ Component, pageProps }) {
                 <link rel="icon" type={`image/${siteconfig.site.favicon.type}`} href={siteconfig.site.favicon.src}></link>
             </Head>
             <Component {...pageProps} /> 
+            <Script strategy='beforeInteractive' src='/assets/js/bootstrap.js' />
         </>
     )
 }
