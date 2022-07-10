@@ -1,5 +1,3 @@
-// import oppenClosedMenu from '../../services/oppenClosedMenu';
-
 export default function Menu(){
     return (
         <form className='menu'>
