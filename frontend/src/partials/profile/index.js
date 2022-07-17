@@ -6,10 +6,10 @@ export default function Profile(){
         <div className='d-flex flex-nowrap align-items-center shadow p-2 profile'>
             <div className='user'>
                 <Image
-                    src='/assets/images/user.jpeg'
+                    src='/assets/images/users/iron_man.png'
                     alt='Rafael Vieira'
-                    width={460}
-                    height={460}
+                    width={137}
+                    height={137}
                     layout='responsive'
                     placeholder='blur'
                     blurDataURL='/assets/images/default.png'

@@ -25,7 +25,7 @@ export default function ResetPasswordScreen(){
                 {isEmail && <form onSubmit={sendEmail}>
                     <h1 className='text-center fs-3'>Por favor informe seu email</h1>
 
-                    <InputEmail label='Email' name='email' icone='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
+                    <InputEmail label='Email' name='email' icon='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
 
                     <div className='col-12 d-flex justify-content-end'>
                         <InputButton type='submit' title='Enviar email' value='Enviar' style='primary' />
@@ -50,7 +50,7 @@ export default function ResetPasswordScreen(){
                     <InputPass label='Confirme sua senha' required name='confirm_password' onChange={handleChange} />
 
                     <div className='py-2 col-12 d-flex justify-content-end'>
-                        <InputButton type='submit' title='Verificar email' value='Verificar' style='primary' />
+                        <InputButton type='submit' title='Verificar email' value='Verificar' style='cm-primary' />
                     </div>
                 </form>}
             </div>

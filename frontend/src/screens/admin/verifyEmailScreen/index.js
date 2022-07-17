@@ -22,7 +22,7 @@ export default function VerifyEmailScreen(){
                     <InputNumber label='Token de verificação' name='token' icon='bi bi-key-fill' required onChange={handleChange} />
 
                     <div className='col-12 d-flex justify-content-end'>
-                        <InputButton type='submit' title='Verificar email' value='Verificar' style='primary' />
+                        <InputButton type='submit' title='Verificar email' value='Verificar' style='cm-primary' />
                     </div>
                 </form>
             </div>

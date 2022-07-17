@@ -29,9 +29,9 @@ export default function RegisterScreen(){
                 </div>
 
                 <form className='col-12 col-sm-6' onSubmit={createUser}>
-                    <InputText label='Nome' name='name' icone='bi bi-person-fill' required onChange={handleChange} />
+                    <InputText label='Nome' name='name' icon='bi bi-person-fill' required onChange={handleChange} />
 
-                    <InputEmail label='Email' name='email' icone='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
+                    <InputEmail label='Email' name='email' icon='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
 
                     <InputPass label='Senha' name='password' required onChange={handleChange} />
 
@@ -49,7 +49,7 @@ export default function RegisterScreen(){
                         </ul>
                     </div>
 
-                    <InputButton type='submit' title='Fazer cadastro' value='Registrar' style='primary' />
+                    <InputButton type='submit' title='Fazer cadastro' value='Registrar' style='cm-primary' />
                 </form>
 
                 <div className='col-12 col-sm-6'>

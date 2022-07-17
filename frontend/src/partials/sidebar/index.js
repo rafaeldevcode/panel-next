@@ -6,7 +6,7 @@ export default function Sidebar(){
     const menu = siteconfig.site.navsidebar;
 
     return (
-        <aside className='vh-100 bg-cm-secondary sidebar' data-expanded='false'>
+        <aside className='bg-cm-secondary sidebar' data-expanded='false'>
             <Profile />
 
             <nav>

@@ -1,3 +1,4 @@
+import Breadcrumbs from "../../../partials/Breadcrumbs";
 import Footer from "../../../partials/Footer";
 import Header from "../../../partials/header";
 import Sidebar from "../../../partials/sidebar";
@@ -11,8 +12,13 @@ export default function TermsScreen(){
                 <section className='w-100'>
                     <Header />
 
-                    <article className='mt-4'>
-                        <h2 className='text-center color-cm-secondary'>Termos de Uso</h2>
+                    <article className='p-3'>
+                        <Breadcrumbs type='Ver' color='cm-success' title='Termos de Uso' bread={{
+                            '1':'&gt;',
+                            '2': 'policies',
+                            '3': '&gt;',
+                            '4': 'terms'
+                        }} />
 
                         <div className='p-3'>
                             <p>

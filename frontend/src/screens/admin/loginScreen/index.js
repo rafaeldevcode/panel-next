@@ -29,7 +29,7 @@ export default function LoginScreen(){
                 </div>
 
                 <form className='col-12 col-sm-6' onSubmit={sendLogin}>
-                    <InputText label='Usuário' name='username' icone='bi bi-person-fill' required onChange={handleChange} />
+                    <InputText label='Usuário' name='username' icon='bi bi-person-fill' required onChange={handleChange} />
 
                     <InputPass label='Senha' name='password' required onChange={handleChange} />
 
@@ -50,7 +50,7 @@ export default function LoginScreen(){
                         </ul>
                     </div>
 
-                    <InputButton type='submit' title='Fazer login' value='Logar' style='primary' />
+                    <InputButton type='submit' title='Fazer login' value='Logar' style='cm-primary' />
                 </form>
             </div>
         </section>
