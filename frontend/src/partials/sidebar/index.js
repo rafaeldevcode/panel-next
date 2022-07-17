@@ -21,9 +21,9 @@ export default function Sidebar(){
                                 </Link>
                             </div>
 
-                            <div className='ms-2 hiddeItem dNone' data-item-active='false'>
+                            <div className='ms-2 hiddeItem dNone w-100' data-item-active='false'>
                                 <Link href={menu[key].href} passHref>
-                                    <a title={menu[key].text} className='text-decoration-none fw-bold text-cm-light'>
+                                    <a title={menu[key].text} className='text-decoration-none fw-bold text-cm-light d-block w-100'>
                                         {menu[key].text}
                                     </a>
                                 </Link>

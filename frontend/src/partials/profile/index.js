@@ -30,6 +30,14 @@ export default function Profile(){
                         </Link>
                     </li>
                     <li>
+                        <Link href='/admin/notifications' passHref>
+                            <a className='dropdown-item d-flex flex-row justify-content-between'>
+                                Notificações
+                                <i className='bi bi-bell-fill' />
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
                         <Link href='/admin/login' passHref>
                             <a className='dropdown-item d-flex flex-row justify-content-between'>
                                 Logout

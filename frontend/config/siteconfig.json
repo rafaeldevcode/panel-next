@@ -28,14 +28,34 @@
         },
         "navsidebar": {
             "1": {
+                "text": "Dashboard",
+                "href": "/admin/dashboard",
+                "icone": "bi bi-speedometer"
+            },
+            "2": {
                 "text": "Usuários",
                 "href": "/admin/users",
                 "icone": "bi bi-people-fill"
             },
-            "2": {
+            "3": {
                 "text": "Permissões",
                 "href": "/admin/permissions",
                 "icone": "bi bi-file-earmark-lock-fill"
+            },
+            "4": {
+                "text": "Menus",
+                "href": "/admin/menus",
+                "icone": "bi bi-menu-button-wide-fill"
+            },
+            "5": {
+                "text": "Notificações",
+                "href": "/admin/notifications",
+                "icone": "bi bi-bell-fill"
+            },
+            "6": {
+                "text": "Configurações",
+                "href": "/admin/settings",
+                "icone": "bi bi-gear-fill"
             }
         }
     }
