@@ -16,7 +16,7 @@ export default function Sidebar(){
                             <div className='nav-icon text-cm-primary text-center'>
                                 <Link href={menu[key].href} passHref>
                                     <a title={menu[key].text} className='text-decoration-none fw-bold text-cm-light'>
-                                        <i className={`${menu[key].icone} fs-2`} />
+                                        <i className={`${menu[key].icone} fs-5`} />
                                     </a>
                                 </Link>
                             </div>

@@ -5,16 +5,20 @@ export default function Profile(){
     return (
         <div className='d-flex flex-nowrap align-items-center shadow p-2 profile'>
             <div className='user'>
-                <Image
-                    src='/assets/images/users/iron_man.png'
-                    alt='Rafael Vieira'
-                    width={137}
-                    height={137}
-                    layout='responsive'
-                    placeholder='blur'
-                    blurDataURL='/assets/images/default.png'
-                    className='border border-cm-primary'
-                />
+                <Link href='/admin/profile' passHref>
+                    <a>
+                        <Image
+                            src='/assets/images/users/iron_man.png'
+                            alt='Rafael Vieira'
+                            width={137}
+                            height={137}
+                            layout='responsive'
+                            placeholder='blur'
+                            blurDataURL='/assets/images/default.png'
+                            className='border border-cm-primary'
+                        />
+                    </a>
+                </Link>
             </div>
             <div className='btn-group hiddeItem dNone'  data-item-active='false'>
                 <button type='button' title='Perfil' className='btn btn-profile w-100 dropdown-toggle text-cm-light fw-bold' data-bs-toggle='dropdown' aria-expanded='false'>
