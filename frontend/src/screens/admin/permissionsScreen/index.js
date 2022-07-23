@@ -58,12 +58,12 @@ export default function PermissionsScreen({ permisions }){
                                         <td>{permisions.permisions[key].permision}</td>
                                         <td>
                                             <Link href={`/admin/permisions/${permisions.permisions[key].id}`} passHref>
-                                                <a title={`Editar usuário ${permisions.permisions[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
+                                                <a title={`Editar permição ${permisions.permisions[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
                                                     <i className='bi bi-pencil-square' />
                                                 </a>
                                             </Link>
 
-                                            <button type='button' title={`Remover usuário ${permisions.permisions[key].name}`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
+                                            <button type='button' title={`Remover permição ${permisions.permisions[key].name}`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
                                                 <i className='bi bi-trash-fill' />
                                             </button>
                                         </td>

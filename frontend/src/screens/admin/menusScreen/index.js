@@ -62,12 +62,12 @@ export default function MenusScreen({ menus }){
                                         <td>{menus.menus[key].position}</td>
                                         <td>
                                             <Link href={`/admin/menus/${menus.menus[key].id}`} passHref>
-                                                <a title={`Editar usuário ${menus.menus[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
+                                                <a title={`Editar item ${menus.menus[key].name} do menu`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
                                                     <i className='bi bi-pencil-square' />
                                                 </a>
                                             </Link>
 
-                                            <button type='button' title={`Remover usuário ${menus.menus[key].name}`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
+                                            <button type='button' title={`Remover item ${menus.menus[key].name} do menu`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
                                                 <i className='bi bi-trash-fill' />
                                             </button>
                                         </td>
