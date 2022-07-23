@@ -34,6 +34,7 @@ export default function NotificationsScreen({ notifications }){
                             type='Listar' 
                             color='cm-primary' 
                             title='Notificações' 
+                            icon='bi bi-bell-fill'
                             bread={bread} 
                             options={options}    
                         />

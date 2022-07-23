@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Breadcrumbs({ type, color, title, bread, options }){
+export default function Breadcrumbs({ type, color, title, bread, icon, options }){
     return (
         <div className='border-bottom mb-3 d-flex justify-content-between align-items-end'>
             <div>
@@ -13,7 +13,10 @@ export default function Breadcrumbs({ type, color, title, bread, options }){
                     </ul>
                 </div>
 
-                <p className='display-5 fw-bold text-cm-secondary'>{title}</p>
+                <div className='d-flex frex-nowrap align-items-center mb-2'>
+                    <i className={`${icon} text-cm-secondary display-6 me-2`} />
+                    <p className='display-5 fw-bold text-cm-secondary mb-0'>{title}</p>
+                </div>
             </div>
 
             {options && <div className='mb-3'>

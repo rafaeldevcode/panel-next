@@ -34,6 +34,7 @@ export default function PermissionsScreen({ permisions }){
                             type='Listar' 
                             color='cm-primary' 
                             title='Permições' 
+                            icon='bi bi-file-earmark-lock-fill'
                             bread={bread} 
                             options={options}
                         />

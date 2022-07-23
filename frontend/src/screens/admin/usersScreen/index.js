@@ -34,7 +34,8 @@ export default function UsersScreen({ users }){
                         <Breadcrumbs 
                             type='Listar' 
                             color='cm-primary' 
-                            title='Usuários' 
+                            title='Usuários'
+                            icon='bi bi-people-fill' 
                             bread={bread}
                             options={options}
                         />

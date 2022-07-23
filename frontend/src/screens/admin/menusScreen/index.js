@@ -33,6 +33,7 @@ export default function MenusScreen({ menus }){
                             type='Listar' 
                             color='cm-primary' 
                             title='Menus' 
+                            icon='bi bi-menu-button-wide-fill'
                             bread={bread} 
                             options={options}    
                         />

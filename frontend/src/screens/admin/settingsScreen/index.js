@@ -13,7 +13,7 @@ export default function SettingsScreen(){
                     <Header />
 
                     <section className='p-3'>
-                        <Breadcrumbs type='Editar' color='cm-primary' title='Configurações' bread={{
+                        <Breadcrumbs type='Editar' color='cm-primary' title='Configurações' icon='bi bi-gear-fill' bread={{
                             '1':'&gt;',
                             '2': 'admin',
                             '3': '&gt;',
