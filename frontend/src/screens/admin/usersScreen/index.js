@@ -4,6 +4,7 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Image from 'next/image';
 import Link from 'next/link';
+import UsersBodyScreen from './usersBodyScreen';
 
 export default function UsersScreen({ users }){
     const options = {
@@ -39,58 +40,7 @@ export default function UsersScreen({ users }){
                         />
                     </section>
 
-                    <section className='p-5 bg-cm-grey m-3 rounded shadow'>
-                        <table className='table table-hover'>
-                            <thead>
-                                <tr>
-                                    <th className='col'>Thumb</th>
-                                    <th className='col'>Nome</th>
-                                    <th className='col'>Email</th>
-                                    <th className='col'>Ações</th>
-                                    <th className='col'>
-                                        <input type='checkbox' id='selectSeveral' />
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                {Object.keys(users.users).map((key) => (
-                                    <tr key={users.users[key].id}>
-                                        <th scope="row" className='d-flex align-items-center'>
-                                            <div className='user'>
-                                                <Image
-                                                    src={users.users[key].photo}
-                                                    alt={users.users[key].name}
-                                                    width={137}
-                                                    height={137}
-                                                    layout='responsive'
-                                                    placeholder='blur'
-                                                    blurDataURL='/assets/images/default.png'
-                                                    className='border border-cm-primary'
-                                                />
-                                            </div>
-                                        </th>
-                                        <td>{users.users[key].name}</td>
-                                        <td>{users.users[key].email}</td>
-                                        <td>
-                                            <Link href={`/admin/users/${users.users[key].id}`} passHref>
-                                                <a title={`Editar usuário ${users.users[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
-                                                    <i className='bi bi-pencil-square' />
-                                                </a>
-                                            </Link>
-
-                                            <button type='button' title={`Remover usuário ${users.users[key].name}`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
-                                                <i className='bi bi-trash-fill' />
-                                            </button>
-                                        </td>
-                                        <th className='col'>
-                                            <input type='checkbox' name='selectSeveral[]' />
-                                        </th>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </section>
+                    <UsersBodyScreen users={users.users} />
                 </section>
             </section>
             <Footer />

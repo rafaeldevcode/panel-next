@@ -3,6 +3,7 @@ import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Link from 'next/link';
+import NotificationsBodyScreen from './notificationsBodyScreen';
 
 export default function NotificationsScreen({ notifications }){
     const options = {
@@ -38,43 +39,7 @@ export default function NotificationsScreen({ notifications }){
                         />
                     </section>
 
-                    <section className='p-5 bg-cm-grey m-3 rounded shadow'>
-                        <table className='table table-hover'>
-                            <thead>
-                                <tr>
-                                    <th className='col'>Nome</th>
-                                    <th className='col'>Status</th>
-                                    <th className='col'>Ações</th>
-                                    <th className='col'>
-                                        <input type='checkbox' id='selectSeveral' />
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                {Object.keys(notifications.notifications).map((key) => (
-                                    <tr key={notifications.notifications[key].id}>
-                                        <td>{notifications.notifications[key].name}</td>
-                                        <td>{notifications.notifications[key].status}</td>
-                                        <td>
-                                            <Link href={`/admin/notifications/${notifications.notifications[key].id}`} passHref>
-                                                <a title={`Editar nitificação ${notifications.notifications[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
-                                                    <i className='bi bi-pencil-square' />
-                                                </a>
-                                            </Link>
-
-                                            <button type='button' title={`Remover nitificação ${notifications.notifications[key].name}`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
-                                                <i className='bi bi-trash-fill' />
-                                            </button>
-                                        </td>
-                                        <th className='col'>
-                                            <input type='checkbox' name='selectSeveral[]' />
-                                        </th>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </section>
+                    <NotificationsBodyScreen notifications={notifications.notifications} />
                 </section>
             </section>
             <Footer />

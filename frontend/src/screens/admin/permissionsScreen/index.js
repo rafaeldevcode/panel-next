@@ -3,6 +3,7 @@ import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Link from 'next/link';
+import PermissionsBodyScreen from './permissionsBodyScreen';
 
 export default function PermissionsScreen({ permisions }){
     const options = {
@@ -38,43 +39,7 @@ export default function PermissionsScreen({ permisions }){
                         />
                     </section>
 
-                    <section className='p-5 bg-cm-grey m-3 rounded shadow'>
-                        <table className='table table-hover'>
-                            <thead>
-                                <tr>
-                                    <th className='col'>Nome</th>
-                                    <th className='col'>Permição</th>
-                                    <th className='col'>Ações</th>
-                                    <th className='col'>
-                                        <input type='checkbox' id='selectSeveral' />
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                {Object.keys(permisions.permisions).map((key) => (
-                                    <tr key={permisions.permisions[key].id}>
-                                        <td>{permisions.permisions[key].name}</td>
-                                        <td>{permisions.permisions[key].permision}</td>
-                                        <td>
-                                            <Link href={`/admin/permisions/${permisions.permisions[key].id}`} passHref>
-                                                <a title={`Editar permição ${permisions.permisions[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
-                                                    <i className='bi bi-pencil-square' />
-                                                </a>
-                                            </Link>
-
-                                            <button type='button' title={`Remover permição ${permisions.permisions[key].name}`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
-                                                <i className='bi bi-trash-fill' />
-                                            </button>
-                                        </td>
-                                        <th className='col'>
-                                            <input type='checkbox' name='selectSeveral[]' />
-                                        </th>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </section>
+                    <PermissionsBodyScreen permisions={permisions.permisions} />
                 </section>
             </section>
             <Footer />
