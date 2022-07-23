@@ -3,11 +3,11 @@ import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 
-export default function SettingsScreen(){
+export default function SettingsScreen({ menus }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar />
+                <Sidebar menus={menus.menus} />
 
                 <section className='w-100'>
                     <Header />

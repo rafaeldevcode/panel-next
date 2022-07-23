@@ -5,7 +5,7 @@ import Breadcrumbs from '../../../partials/breadcrumbs';
 import Link from 'next/link';
 import NotificationsBodyScreen from './notificationsBodyScreen';
 
-export default function NotificationsScreen({ notifications }){
+export default function NotificationsScreen({ notifications, menus }){
     const options = {
         'add': {
             'href': '/admin/notifications/add'
@@ -24,7 +24,7 @@ export default function NotificationsScreen({ notifications }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar />
+                <Sidebar menus={menus.menus} />
 
                 <section className='w-100'>
                     <Header />
@@ -32,7 +32,7 @@ export default function NotificationsScreen({ notifications }){
                     <section className='p-3'>
                         <Breadcrumbs 
                             type='Listar' 
-                            color='cm-primary' 
+                            color='cm-secondary' 
                             title='Notificações' 
                             icon='bi bi-bell-fill'
                             bread={bread} 

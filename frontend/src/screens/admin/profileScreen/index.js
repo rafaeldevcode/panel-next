@@ -7,11 +7,11 @@ import { getFields } from '../../../services/validitForm';
 import { useEffect } from 'react';
 import ProfileBodyScreen from './profileBodyScreen';
 
-export default function ProfileScreen(){
+export default function ProfileScreen({ menus }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar />
+                <Sidebar menus={menus.menus} />
 
                 <section className='w-100'>
                     <Header />

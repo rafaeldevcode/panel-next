@@ -23,7 +23,7 @@ export default function MenusScreen({ menus }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar />
+                <Sidebar menus={menus.menus} />
 
                 <section className='w-100'>
                     <Header />
@@ -31,7 +31,7 @@ export default function MenusScreen({ menus }){
                     <section className='p-3'>
                         <Breadcrumbs 
                             type='Listar' 
-                            color='cm-primary' 
+                            color='cm-secondary' 
                             title='Menus' 
                             icon='bi bi-menu-button-wide-fill'
                             bread={bread} 

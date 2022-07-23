@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import UsersBodyScreen from './usersBodyScreen';
 
-export default function UsersScreen({ users }){
+export default function UsersScreen({ users, menus }){
     const options = {
         'add': {
             'href': '/admin/users/add'
@@ -25,7 +25,7 @@ export default function UsersScreen({ users }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar />
+                <Sidebar menus={menus.menus} />
 
                 <section className='w-100'>
                     <Header />
@@ -33,7 +33,7 @@ export default function UsersScreen({ users }){
                     <section className='p-3'>
                         <Breadcrumbs 
                             type='Listar' 
-                            color='cm-primary' 
+                            color='cm-secondary' 
                             title='Usuários'
                             icon='bi bi-people-fill' 
                             bread={bread}
