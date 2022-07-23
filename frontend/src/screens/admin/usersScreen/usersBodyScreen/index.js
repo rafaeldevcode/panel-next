@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { selectSeveral, disableEnableBtn } from '../../../../services/deleteItems';
 
 export default function UsersBodyScreen({ users }){
     return (
@@ -12,7 +13,7 @@ export default function UsersBodyScreen({ users }){
                         <th className='col'>Email</th>
                         <th className='col'>Ações</th>
                         <th className='col'>
-                            <input type='checkbox' id='selectSeveral' />
+                            <input type='checkbox' onClick={selectSeveral} />
                         </th>
                     </tr>
                 </thead>
@@ -48,12 +49,12 @@ export default function UsersBodyScreen({ users }){
                                 </button>
                             </td>
                             <th className='col'>
-                                <input type='checkbox' name='selectSeveral[]' />
+                                <input type='checkbox' name='selectSeveral[]' onClick={disableEnableBtn} />
                             </th>
                         </tr>
                     ))}
                 </tbody>
             </table>
         </section>
-    )
+    );
 }

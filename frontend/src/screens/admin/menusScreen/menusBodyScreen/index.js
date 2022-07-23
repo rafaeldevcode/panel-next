@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { selectSeveral, disableEnableBtn } from '../../../../services/deleteItems';
 
 export default function MenusBodyScreen({ menus }){
     return (
@@ -12,7 +13,7 @@ export default function MenusBodyScreen({ menus }){
                         <th className='col'>Posição</th>
                         <th className='col'>Ações</th>
                         <th className='col'>
-                            <input type='checkbox' id='selectSeveral' />
+                            <input type='checkbox' onClick={selectSeveral} />
                         </th>
                     </tr>
                 </thead>
@@ -36,12 +37,12 @@ export default function MenusBodyScreen({ menus }){
                                 </button>
                             </td>
                             <th className='col'>
-                                <input type='checkbox' name='selectSeveral[]' />
+                                <input type='checkbox' name='selectSeveral[]' onClick={disableEnableBtn} />
                             </th>
                         </tr>
                     ))}
                 </tbody>
             </table>
         </section>
-    )
+    );
 }

@@ -24,9 +24,9 @@ export default function Breadcrumbs({ type, color, title, bread, icon, options }
                     <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
                 </Link>}
 
-                {options.delete && <Link href={options.delete.href} passHref>
-                    <a title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>Remover</a>
-                </Link>}
+                {options.delete && <button id='deleteAll' type='button' title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>
+                    Remover
+                </button>}
             </div>}
         </div>
     )
