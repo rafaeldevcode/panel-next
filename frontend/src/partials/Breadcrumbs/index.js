@@ -18,11 +18,11 @@ export default function Breadcrumbs({ type, color, title, bread, options }){
 
             {options && <div className='mb-3'>
                 {options.add && <Link href={options.add.href} passHref>
-                    <a className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
+                    <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
                 </Link>}
 
                 {options.delete && <Link href={options.delete.href} passHref>
-                    <a className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>Remover</a>
+                    <a title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>Remover</a>
                 </Link>}
             </div>}
         </div>

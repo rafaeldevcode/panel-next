@@ -6,7 +6,7 @@ export default function Profile(){
         <div className='d-flex flex-nowrap align-items-center shadow p-2 profile'>
             <div className='user'>
                 <Link href='/admin/profile' passHref>
-                    <a>
+                    <a title="Editar perfil de Rafael Vieira">
                         <Image
                             src='/assets/images/users/iron_man.png'
                             alt='Rafael Vieira'

@@ -29,6 +29,7 @@ $cm-warning : #FFFF00;
 $cm-danger : #FF0000;
 $cm-light : #FFFFFF;
 $cm-dark : #000000;
+$cm-grey : #f4f4f4;
 
 // Tema com cores pesonalizadas
 $custom-colors: (
@@ -39,7 +40,8 @@ $custom-colors: (
   "cm-warning":    $cm-warning,
   "cm-danger":     $cm-danger,
   "cm-light":      $cm-light,
-  "cm-dark":       $cm-dark
+  "cm-dark":       $cm-dark,
+  "cm-grey":       $cm-grey
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

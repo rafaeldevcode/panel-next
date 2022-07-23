@@ -50,7 +50,7 @@ export default function ResetPasswordScreen(){
                     <InputPass label='Confirme sua senha' required name='confirm_password' onChange={handleChange} />
 
                     <div className='py-2 col-12 d-flex justify-content-end'>
-                        <InputButton type='submit' title='Verificar email' value='Verificar' style='cm-primary' />
+                        <InputButton type='submit' title='Redefinir senha' value='Verificar' style='cm-primary' />
                     </div>
                 </form>}
             </div>

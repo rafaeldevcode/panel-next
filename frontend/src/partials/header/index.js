@@ -10,7 +10,7 @@ export default function Header(){
 
                 <div className='logo-header h-auto my-auto'>
                     <Link href='/admin/dashboard' passHref>
-                        <a>
+                        <a title='Voltar a página inicial'>
                             <Logo image='logo-white' />
                         </a>
                     </Link>
