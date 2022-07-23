@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Logo from '../logo';
-import Menu from '../Menu';
+import Menu from '../menu';
 
 export default function Header(){
     return (

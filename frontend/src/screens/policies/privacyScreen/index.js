@@ -1,5 +1,5 @@
-import Breadcrumbs from "../../../partials/Breadcrumbs";
-import Footer from "../../../partials/Footer";
+import Breadcrumbs from "../../../partials/breadcrumbs";
+import Footer from "../../../partials/footer";
 import Header from "../../../partials/header";
 import Sidebar from "../../../partials/sidebar";
 

@@ -1,7 +1,7 @@
-import Footer from '../../../partials/Footer';
+import Footer from '../../../partials/footer';
 import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
-import Breadcrumbs from '../../../partials/Breadcrumbs';
+import Breadcrumbs from '../../../partials/breadcrumbs';
 
 export default function SettingsScreen(){
     return (
