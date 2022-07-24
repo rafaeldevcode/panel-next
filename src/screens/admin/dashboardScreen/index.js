@@ -2,6 +2,7 @@ import Footer from '../../../partials/footer';
 import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
+import DashboardBodyScreen from './dashboardBodyScreen';
 
 export default function DashboardScreen({ menus }){
     return (
@@ -20,6 +21,8 @@ export default function DashboardScreen({ menus }){
                             '4': 'dashboard'
                         }} />
                     </section>
+
+                    <DashboardBodyScreen/>
                 </section>
             </section>
             <Footer />
