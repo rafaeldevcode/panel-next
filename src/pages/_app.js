@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }) {
             </Head>
             <Component {...pageProps} /> 
             
-            <Script strategy='beforeInteractive' src="https://code.jquery.com/jquery-3.6.0.js" />
+            <Script strategy='beforeInteractive' src='/assets/js/jquery.js' />
             <Script strategy='beforeInteractive' src='/assets/js/bootstrap.js' />
         </>
     )
