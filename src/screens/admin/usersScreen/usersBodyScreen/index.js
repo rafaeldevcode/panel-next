@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { selectSeveral, disableEnableBtn } from '../../../../services/deleteItems';
+import ModalDelete from "../../../../partials/modalDelete";
+import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../services/deleteItems';
 
 export default function UsersBodyScreen({ users }){
     return (
@@ -44,17 +45,36 @@ export default function UsersBodyScreen({ users }){
                                     </a>
                                 </Link>
 
-                                <button type='button' title={`Remover usuário ${users[key].name}`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
-                                    <i className='bi bi-trash-fill' />
+                                <button 
+                                    onClick={deleteItem} 
+                                    data-route={`/admin/users/delete/${users[key].id}`} 
+                                    data-message={`Esta ação irá remover o usuário "${users[key].name}"!`}
+                                    type='button' 
+                                    title={`Remover usuário ${users[key].name}`} 
+                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'
+                                >
+                                    <i 
+                                        data-route={`/admin/users/delete/${users[key].id}`} 
+                                        data-message={`Esta ação irá remover o usuário "${users[key].name}"!`} 
+                                        className='bi bi-trash-fill' 
+                                    />
                                 </button>
                             </td>
                             <th className='col'>
-                                <input type='checkbox' name='selectSeveral[]' onClick={disableEnableBtn} />
+                                <input 
+                                    data-route={`/admin/users/delete/${users[key].id}`} 
+                                    data-message={`Esta ação irá remover todos os usuários selecionados!`} 
+                                    type='checkbox' 
+                                    name='selectSeveral[]' 
+                                    onClick={disableEnableBtn} 
+                                />
                             </th>
                         </tr>
                     ))}
                 </tbody>
             </table>
+
+            <ModalDelete />
         </section>
     );
 }

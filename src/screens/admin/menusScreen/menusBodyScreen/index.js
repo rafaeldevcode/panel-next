@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { selectSeveral, disableEnableBtn } from '../../../../services/deleteItems';
+import ModalDelete from '../../../../partials/modalDelete';
+import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../services/deleteItems';
 
 export default function MenusBodyScreen({ menus }){
     return (
@@ -32,17 +33,36 @@ export default function MenusBodyScreen({ menus }){
                                     </a>
                                 </Link>
 
-                                <button type='button' title={`Remover item ${menus[key].name} do menu`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
-                                    <i className='bi bi-trash-fill' />
+                                <button 
+                                    onClick={deleteItem} 
+                                    data-route={`/admin/menus/delete/${menus[key].id}`} 
+                                    data-message={`Esta ação irá remover o item "${menus[key].name} do menu"!`}
+                                    type='button' 
+                                    title={`Remover item ${menus[key].name} do menu`}
+                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'
+                                >
+                                    <i 
+                                        data-route={`/admin/menus/delete/${menus[key].id}`} 
+                                        data-message={`Esta ação irá remover o item "${menus[key].name}" do menu!`} 
+                                        className='bi bi-trash-fill' 
+                                    />
                                 </button>
                             </td>
                             <th className='col'>
-                                <input type='checkbox' name='selectSeveral[]' onClick={disableEnableBtn} />
+                                <input 
+                                    data-route={`/admin/menus/delete/${menus[key].id}`} 
+                                    data-message={`Esta ação irá remover todos os items selecionados!`} 
+                                    type='checkbox' 
+                                    name='selectSeveral[]' 
+                                    onClick={disableEnableBtn} 
+                                />
                             </th>
                         </tr>
                     ))}
                 </tbody>
             </table>
+
+            <ModalDelete />
         </section>
     );
 }

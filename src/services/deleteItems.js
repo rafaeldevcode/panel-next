@@ -44,3 +44,30 @@ export function selectSeveral(event){
         btnDeleteAll.classList.add('disabled');
     }
 }
+
+export function deleteItem(event){
+    const button = event.target;
+    const route = $(button).attr('data-route');
+    const message = $(button).attr('data-message');
+    const modalLabel = $('#modalDeleteItemLabel');
+    
+    modalLabel.text(message);
+
+    $('#modalDeleteItem').modal('show');
+}
+
+export function deleteAllItems(){
+    const allItems = [];
+    const modalLabel = $('#modalDeleteItemLabel');
+    const itemsDelete = document.querySelectorAll('input[name="selectSeveral[]"]');
+    const message = $(itemsDelete[0]).attr('data-message');
+
+    itemsDelete.forEach((item)=>{
+        if(item.checked){
+            allItems.push($(item).attr('data-route'));
+        }
+    });
+
+    modalLabel.text(message);
+    $('#modalDeleteItem').modal('show');
+}

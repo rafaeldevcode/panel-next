@@ -12,6 +12,8 @@ export default function MyApp({ Component, pageProps }) {
                 <link rel="icon" type={`image/${siteconfig.site.favicon.type}`} href={siteconfig.site.favicon.src}></link>
             </Head>
             <Component {...pageProps} /> 
+            
+            <Script strategy='beforeInteractive' src="https://code.jquery.com/jquery-3.6.0.js" />
             <Script strategy='beforeInteractive' src='/assets/js/bootstrap.js' />
         </>
     )

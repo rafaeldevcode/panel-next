@@ -6,13 +6,13 @@ export default function ModalImagesProfile(){
     const images = imagesprofile.profile;
     
     return (
-        <div className='modal fade' id='imagesProfile' tabindex='-1' aria-labelledby='imagesProfileLabel' aria-hidden='true'>
-            <div className='modal-dialog'>
-                <div className='modal-content'>
+        <div className='modal fade' id='imagesProfile' tabIndex='-1' aria-labelledby='imagesProfileLabel' aria-hidden='true'>
+            <div className='modal-dialog modal-lg'>
+                <div className='modal-content border border-cm-primary'>
                     <form>
-                        <div className='modal-header'>
-                            <h5 className='modal-title' id='imagesProfileLabel'>Escolha uma imagem</h5>
-                            <button type='button' className='btn-close' data-bs-dismiss='modal' aria-label='Close' />
+                        <div className='modal-header bg-cm-primary'>
+                            <h5 className='modal-title text-cm-light' id='imagesProfileLabel'>Escolha uma imagem</h5>
+                            <button title='Fechar modal' type='button' className='btn-close' data-bs-dismiss='modal' aria-label='Fechar' />
                         </div>
 
                         <div className='modal-body'>
@@ -37,8 +37,7 @@ export default function ModalImagesProfile(){
                             </div>
                         </div>
                         
-                        <div className="modal-footer">
-                            <button title='Fechar modal' type="button" className="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <div className="modal-footer p-2">
                             <InputButton type='submit' title='Salvar configurações' value='Salvar' style='cm-primary' />
                         </div>
                     </form>

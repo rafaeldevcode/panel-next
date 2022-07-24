@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { selectSeveral, disableEnableBtn } from '../../../../services/deleteItems';
+import ModalDelete from '../../../../partials/modalDelete';
+import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../services/deleteItems';
 
 export default function NotificationsBodyScreen({ notifications }){
     return (
@@ -28,17 +29,36 @@ export default function NotificationsBodyScreen({ notifications }){
                                     </a>
                                 </Link>
 
-                                <button type='button' title={`Remover nitificação ${notifications[key].name}`} className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'>
-                                    <i className='bi bi-trash-fill' />
+                                <button 
+                                    onClick={deleteItem} 
+                                    data-route={`/admin/notifications/delete/${notifications[key].id}`} 
+                                    data-message={`Esta ação irá remover a nitificação "${notifications[key].name}"!`}
+                                    type='button' 
+                                    title={`Remover nitificação ${notifications[key].name}`}
+                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'
+                                >
+                                    <i 
+                                        data-route={`/admin/notifications/delete/${notifications[key].id}`} 
+                                        data-message={`Esta ação irá remover a notificação "${notifications[key].name}"!`} 
+                                        className='bi bi-trash-fill' 
+                                    />
                                 </button>
                             </td>
                             <th className='col'>
-                                <input type='checkbox' name='selectSeveral[]' onClick={disableEnableBtn} />
+                                <input 
+                                    data-route={`/admin/notifications/delete/${notifications[key].id}`}  
+                                    data-message={`Esta ação irá remover todas as notificações selecionadas!`} 
+                                    type='checkbox' 
+                                    name='selectSeveral[]' 
+                                    onClick={disableEnableBtn} 
+                                />
                             </th>
                         </tr>
                     ))}
                 </tbody>
             </table>
+
+            <ModalDelete />
         </section>
     );
 }

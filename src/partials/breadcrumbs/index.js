@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { deleteAllItems } from '../../services/deleteItems';
 
 export default function Breadcrumbs({ type, color, title, bread, icon, options }){
     return (
@@ -24,7 +25,7 @@ export default function Breadcrumbs({ type, color, title, bread, icon, options }
                     <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
                 </Link>}
 
-                {options.delete && <button id='deleteAll' type='button' title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>
+                {options.delete && <button onClick={deleteAllItems} id='deleteAll' type='button' title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>
                     Remover
                 </button>}
             </div>}
