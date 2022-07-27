@@ -12,10 +12,20 @@ export async function getServerSideProps(ctx){
             return response;
         });
 
+    const notifications = await fetch('http://localhost:3000/api/notifications/list')
+        .then((response) => {
+
+            return response.json();
+        })
+        .then((response) => {
+            return response;
+        });
+
     return {
         props: {
             token: token,
-            menus: menus
+            menus: menus,
+            notifications: notifications
         }
     }
 }

@@ -35,6 +35,25 @@ input[type=number]
         background: $cm-light !important
         color: $cm-primary !important
 
+// Notification flutuante
+.notification
+    max-width: 600px
+    height: 600px
+    transform: translateY(600px)
+    
+    &-btn
+        width: 45px
+        height: 45px
+        top: -45px
+        cursor: pointer
+
+// Animação para abertura da notificações
+div[data-notification="true"]
+    animation: .8s showNotifications ease-out forwards
+
+div[data-notification="false"]
+    animation: .8s hiddeNotifications ease-out forwards
+
 // Painel de login
 .image-bg-login
     min-width: 100%

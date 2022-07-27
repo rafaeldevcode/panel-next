@@ -3,8 +3,9 @@ import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import DashboardBodyScreen from './dashboardBodyScreen';
+import Notifications from '../../../partials/notifications';
 
-export default function DashboardScreen({ menus }){
+export default function DashboardScreen({ menus, notifications }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
@@ -24,6 +25,8 @@ export default function DashboardScreen({ menus }){
 
                     <DashboardBodyScreen/>
                 </section>
+
+                <Notifications notifications={notifications.notifications} />
             </section>
             <Footer />
         </>
