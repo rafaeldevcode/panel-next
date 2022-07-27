@@ -1,12 +1,14 @@
 import MenusScreen from "../../../screens/admin/menusScreen";
-import { getAllMenus } from "../../../services/consultAPI";
+import { getAllMenus, getAllNotifications } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
     const menus = await getAllMenus();
+    const notifications = await getAllNotifications();
 
     return {
         props: {
-            menus: menus
+            menus: menus,
+            notifications: notifications
         }
     }
 }

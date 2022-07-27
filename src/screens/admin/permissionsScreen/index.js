@@ -2,10 +2,10 @@ import Footer from '../../../partials/footer';
 import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
-import Link from 'next/link';
+import Notification from '../../../partials/notifications';
 import PermissionsBodyScreen from './permissionsBodyScreen';
 
-export default function PermissionsScreen({ permisions, menus }){
+export default function PermissionsScreen({ permisions, menus, notifications }){
     const options = {
         'add': {
             'href': '/admin/permissions/add'
@@ -42,6 +42,8 @@ export default function PermissionsScreen({ permisions, menus }){
 
                     <PermissionsBodyScreen permisions={permisions.permisions} />
                 </section>
+
+                <Notification notifications={notifications.notifications} />
             </section>
             <Footer />
         </>

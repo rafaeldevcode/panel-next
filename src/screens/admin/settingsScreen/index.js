@@ -2,8 +2,9 @@ import Footer from '../../../partials/footer';
 import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
+import Notification from '../../../partials/notifications';
 
-export default function SettingsScreen({ menus }){
+export default function SettingsScreen({ menus, notifications }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
@@ -21,6 +22,8 @@ export default function SettingsScreen({ menus }){
                         }} />
                     </section>
                 </section>
+
+                <Notification notifications={notifications.notifications} />
             </section>
             <Footer />
         </>

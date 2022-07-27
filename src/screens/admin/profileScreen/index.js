@@ -3,11 +3,10 @@ import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import ModalImagesProfile from './partials/modalImagesProfile';
-import { getFields } from '../../../services/validitForm';
-import { useEffect } from 'react';
+import Notification from '../../../partials/notifications';
 import ProfileBodyScreen from './profileBodyScreen';
 
-export default function ProfileScreen({ menus }){
+export default function ProfileScreen({ menus, notifications }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
@@ -27,6 +26,8 @@ export default function ProfileScreen({ menus }){
 
                     <ProfileBodyScreen />
                 </section>
+
+                <Notification notifications={notifications.notifications} />
             </section>
 
             {/* Modal for image profile */}

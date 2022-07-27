@@ -2,11 +2,10 @@ import Footer from '../../../partials/footer';
 import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
-import Image from 'next/image';
-import Link from 'next/link';
+import Notification from '../../../partials/notifications';
 import UsersBodyScreen from './usersBodyScreen';
 
-export default function UsersScreen({ users, menus }){
+export default function UsersScreen({ users, menus, notifications }){
     const options = {
         'add': {
             'href': '/admin/users/add'
@@ -43,6 +42,8 @@ export default function UsersScreen({ users, menus }){
 
                     <UsersBodyScreen users={users.users} />
                 </section>
+
+                <Notification notifications={notifications.notifications} />
             </section>
             <Footer />
         </>

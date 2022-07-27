@@ -3,8 +3,9 @@ import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import MenusBodyScreen from './menusBodyScreen';
+import Notification from '../../../partials/notifications';
 
-export default function MenusScreen({ menus }){
+export default function MenusScreen({ menus, notifications }){
     const options = {
         'add': {
             'href': '/admin/menus/add'
@@ -41,6 +42,8 @@ export default function MenusScreen({ menus }){
 
                     <MenusBodyScreen menus={menus.menus} />
                 </section>
+
+                <Notification notifications={notifications.notifications} />
             </section>
             <Footer />
         </>

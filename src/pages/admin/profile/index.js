@@ -1,18 +1,14 @@
 import ProfileScreen from "../../../screens/admin/profileScreen";
+import { getAllMenus, getAllNotifications } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
-    const menus = await fetch('http://localhost:3000/api/menus/list')
-        .then((response) => {
-
-            return response.json();
-        })
-        .then((response) => {
-            return response;
-        });
+    const menus = await getAllMenus();
+    const notifications = await getAllNotifications();
 
     return {
         props: {
-            menus: menus
+            menus: menus,
+            notifications: notifications
         }
     }
 }
