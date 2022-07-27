@@ -1,24 +1,10 @@
 import PermissionsScreen from "../../../screens/admin/permissionsScreen";
+import { getAllMenus, getAllPermisions } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
-    const permisions = await fetch('http://localhost:3000/api/permisions/list')
-        .then((response) => {
-
-            return response.json();
-        })
-        .then((response) => {
-            return response;
-        });
-
-    const menus = await fetch('http://localhost:3000/api/menus/list')
-        .then((response) => {
-
-            return response.json();
-        })
-        .then((response) => {
-            return response;
-        });
-
+    const menus = await getAllMenus();
+    const permisions = await getAllPermisions();
+    
     return {
         props: {
             permisions: permisions,

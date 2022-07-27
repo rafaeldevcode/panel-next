@@ -1,24 +1,10 @@
 import UsersScreen from "../../../screens/admin/usersScreen";
+import { getAllMenus, getAllUsers } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
-    const users = await fetch('http://localhost:3000/api/users/list')
-        .then((response) => {
-
-            return response.json();
-        })
-        .then((response) => {
-            return response;
-        });
-
-    const menus = await fetch('http://localhost:3000/api/menus/list')
-        .then((response) => {
-
-            return response.json();
-        })
-        .then((response) => {
-            return response;
-        });
-
+    const menus = await getAllMenus();
+    const users = await getAllUsers();
+    
     return {
         props: {
             users: users,

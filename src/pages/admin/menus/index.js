@@ -1,14 +1,8 @@
 import MenusScreen from "../../../screens/admin/menusScreen";
+import { getAllMenus } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
-    const menus = await fetch('http://localhost:3000/api/menus/list')
-        .then((response) => {
-
-            return response.json();
-        })
-        .then((response) => {
-            return response;
-        });
+    const menus = await getAllMenus();
 
     return {
         props: {

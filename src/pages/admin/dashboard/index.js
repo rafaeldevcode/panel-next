@@ -1,25 +1,11 @@
 import { tokenService } from "../../../services/auth/tokenService";
 import DashboardScreen from "../../../screens/admin/dashboardScreen";
+import { getAllMenus, getAllNotifications } from "../../../services/consultAPI";
 
 export async function getServerSideProps(ctx){
     const token = tokenService.get(ctx);
-    const menus = await fetch('http://localhost:3000/api/menus/list')
-        .then((response) => {
-
-            return response.json();
-        })
-        .then((response) => {
-            return response;
-        });
-
-    const notifications = await fetch('http://localhost:3000/api/notifications/list')
-        .then((response) => {
-
-            return response.json();
-        })
-        .then((response) => {
-            return response;
-        });
+    const menus = await getAllMenus();
+    const notifications = await getAllNotifications();
 
     return {
         props: {
