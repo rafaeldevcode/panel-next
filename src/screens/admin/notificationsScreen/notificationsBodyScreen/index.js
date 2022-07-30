@@ -8,23 +8,32 @@ export default function NotificationsBodyScreen({ notifications }){
             <table className='table table-hover'>
                 <thead>
                     <tr>
-                        <th className='col'>Nome</th>
-                        <th className='col'>Status</th>
-                        <th className='col'>Ações</th>
                         <th className='col'>
                             <input type='checkbox' onClick={selectSeveral} />
                         </th>
+                        <th className='col'>Nome</th>
+                        <th className='col'>Status</th>
+                        <th className='col'>Ações</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     {Object.keys(notifications).map((key) => (
                         <tr key={notifications[key].id}>
+                            <td className='col'>
+                                <input 
+                                    data-route={`/admin/notifications/delete/${notifications[key].id}`}  
+                                    data-message={`Esta ação irá remover todas as notificações selecionadas!`} 
+                                    type='checkbox' 
+                                    name='selectSeveral[]' 
+                                    onClick={disableEnableBtn} 
+                                />
+                            </td>
                             <td>{notifications[key].name}</td>
-                            <td>{notifications[key].status}</td>
+                            <td>{notifications[key].status === true ? 'Ativa' : 'Inativa'}</td>
                             <td>
                                 <Link href={`/admin/notifications/${notifications[key].id}`} passHref>
-                                    <a title={`Editar nitificação ${notifications[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
+                                    <a title={`Editar nitificação ${notifications[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold m-1'>
                                         <i className='bi bi-pencil-square' />
                                     </a>
                                 </Link>
@@ -35,7 +44,7 @@ export default function NotificationsBodyScreen({ notifications }){
                                     data-message={`Esta ação irá remover a nitificação "${notifications[key].name}"!`}
                                     type='button' 
                                     title={`Remover nitificação ${notifications[key].name}`}
-                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'
+                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold m-1'
                                 >
                                     <i 
                                         data-route={`/admin/notifications/delete/${notifications[key].id}`} 
@@ -44,15 +53,6 @@ export default function NotificationsBodyScreen({ notifications }){
                                     />
                                 </button>
                             </td>
-                            <th className='col'>
-                                <input 
-                                    data-route={`/admin/notifications/delete/${notifications[key].id}`}  
-                                    data-message={`Esta ação irá remover todas as notificações selecionadas!`} 
-                                    type='checkbox' 
-                                    name='selectSeveral[]' 
-                                    onClick={disableEnableBtn} 
-                                />
-                            </th>
                         </tr>
                     ))}
                 </tbody>

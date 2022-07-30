@@ -1,10 +1,4 @@
-@mixin error
-    0%
-        transform: translateY(0)
-        opacity: 0
-    100%
-        transform: translateY(20px)
-        opacity: 1
+@import ./_mixins
     
 @keyframes showError
     @include error
@@ -86,3 +80,17 @@
 
     100%
         transform: translateY(600px)
+
+@keyframes expandedAsideMobile
+    0%
+        transform: translateX(-200px)
+    
+    100%
+        transform: translateX(0)
+
+@keyframes toRecalldAsideMobile
+    0%
+        transform: translateX(0)
+    
+    100%
+        transform: translateX(-200px)

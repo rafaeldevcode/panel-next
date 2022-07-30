@@ -47,6 +47,9 @@ input[type=number]
         top: -45px
         cursor: pointer
 
+.bubbleNotification
+    font-size: .6rem !important
+
 // Animação para abertura da notificações
 div[data-notification="true"]
     animation: .8s showNotifications ease-out forwards
@@ -125,8 +128,11 @@ div[data-message="false"]
 .profile
     min-height: 50px
 
-.btn-profile:focus
-    box-shadow: none
+    &-dropdawn
+        z-index: 1
+
+        &-btn:focus
+            box-shadow: none
 
 .user
     width: 45px
@@ -134,12 +140,6 @@ div[data-message="false"]
 
     img
         border-radius: 50%
-
-aside[data-expanded='false']
-    animation: toRecalldAside .4s .2s ease-in-out forwards
-
-aside[data-expanded='true']
-    animation: expandedAside .4s ease-in-out forwards
 
 // Menu sandwiche
 .menu
@@ -184,8 +184,11 @@ aside[data-expanded='true']
 .sidebar
     min-height: 100vh
 
-.nav-icon
-    width: 45px
+.sidebar[data-expanded='desactive']
+    animation: toRecalldAside .4s .2s ease-in-out forwards
+
+.sidebar[data-expanded='active']
+    animation: expandedAside .4s ease-in-out forwards
 
 .hiddeItem
     opacity: 0
@@ -193,12 +196,19 @@ aside[data-expanded='true']
 .dNone
     display: none
 
+.iconManu
+    width: 100%
+
 .itemNavSidbar
-    // border: 1px solid transparent
     transition: all .4s
 
     &:hover
         background: $cm-primary
+
+    div
+
+        a
+            padding: .5rem
 
 div[data-item-active='false']
     animation: hiddeItem .2s linear forwards

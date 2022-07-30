@@ -1,28 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import ModalDelete from "../../../../partials/modalDelete";
 import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../services/deleteItems';
+import { hiddenItems } from "../../../../services/hiddenItems";
 
 export default function UsersBodyScreen({ users }){
+    useEffect(()=>{
+        hiddenItems(['td[data-col="email"]', 'th[data-row="email"]'], 576);
+    }, []);
+
     return (
         <section className='p-5 bg-cm-grey m-3 rounded shadow'>
             <table className='table table-hover'>
                 <thead>
                     <tr>
-                        <th className='col'>Thumb</th>
-                        <th className='col'>Nome</th>
-                        <th className='col'>Email</th>
-                        <th className='col'>Ações</th>
                         <th className='col'>
                             <input type='checkbox' onClick={selectSeveral} />
                         </th>
+                        <th className='col'>Thumb</th>
+                        <th className='col'>Nome</th>
+                        <th className='col' data-row='email'>Email</th>
+                        <th className='col'>Ações</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     {Object.keys(users).map((key) => (
                         <tr key={users[key].id}>
-                            <th scope="row" className='d-flex align-items-center'>
+                            <td className='col'>
+                                <input 
+                                    data-route={`/admin/users/delete/${users[key].id}`} 
+                                    data-message={`Esta ação irá remover todos os usuários selecionados!`} 
+                                    type='checkbox' 
+                                    name='selectSeveral[]' 
+                                    onClick={disableEnableBtn} 
+                                />
+                            </td>
+                            <th scope="row">
                                 <div className='user'>
                                     <Image
                                         src={users[key].photo}
@@ -37,10 +52,10 @@ export default function UsersBodyScreen({ users }){
                                 </div>
                             </th>
                             <td>{users[key].name}</td>
-                            <td>{users[key].email}</td>
+                            <td data-col='email'>{users[key].email}</td>
                             <td>
                                 <Link href={`/admin/users/${users[key].id}`} passHref>
-                                    <a title={`Editar usuário ${users[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
+                                    <a title={`Editar usuário ${users[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold m-1'>
                                         <i className='bi bi-pencil-square' />
                                     </a>
                                 </Link>
@@ -51,7 +66,7 @@ export default function UsersBodyScreen({ users }){
                                     data-message={`Esta ação irá remover o usuário "${users[key].name}"!`}
                                     type='button' 
                                     title={`Remover usuário ${users[key].name}`} 
-                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'
+                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold m-1'
                                 >
                                     <i 
                                         data-route={`/admin/users/delete/${users[key].id}`} 
@@ -60,15 +75,6 @@ export default function UsersBodyScreen({ users }){
                                     />
                                 </button>
                             </td>
-                            <th className='col'>
-                                <input 
-                                    data-route={`/admin/users/delete/${users[key].id}`} 
-                                    data-message={`Esta ação irá remover todos os usuários selecionados!`} 
-                                    type='checkbox' 
-                                    name='selectSeveral[]' 
-                                    onClick={disableEnableBtn} 
-                                />
-                            </th>
                         </tr>
                     ))}
                 </tbody>

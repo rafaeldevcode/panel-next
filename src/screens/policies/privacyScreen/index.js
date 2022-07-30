@@ -15,12 +15,7 @@ export default function PrivacyScreen({ menus, notifications }){
                     <Header />
 
                     <section className='p-3'>
-                        <Breadcrumbs type='Visualizar' color='cm-secondary' title='Politicas de Privacidade' icon='bi bi-file-earmark-text-fill' bread={{
-                            '1':'&gt;',
-                            '2': 'policies',
-                            '3': '&gt;',
-                            '4': 'privacy'
-                        }} />
+                        <Breadcrumbs type='Visualizar' color='cm-secondary' title='Politicas de Privacidade' icon='bi bi-file-earmark-text-fill' />
                     </section>
 
                     <PrivacyBodyScreen />

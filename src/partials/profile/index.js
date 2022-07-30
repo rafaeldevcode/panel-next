@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import { oppenNotifications } from "../../services/oppenNotifications";
 
 export default function Profile(){
     return (
@@ -20,8 +21,8 @@ export default function Profile(){
                     </a>
                 </Link>
             </div>
-            <div className='btn-group hiddeItem dNone'  data-item-active='false'>
-                <button type='button' title='Perfil' className='btn btn-profile w-100 dropdown-toggle text-cm-light fw-bold' data-bs-toggle='dropdown' aria-expanded='false'>
+            <div className='btn-group hiddeItem dNone profile-dropdawn'  data-item-active='false'>
+                <button type='button' title='Perfil' className='btn profile-dropdawn-btn w-100 dropdown-toggle text-cm-light fw-bold' data-bs-toggle='dropdown' aria-expanded='false'>
                     Rafael Vieira
                 </button>
                 <ul className='dropdown-menu dropdown-menu-dark'>
@@ -34,10 +35,12 @@ export default function Profile(){
                         </Link>
                     </li>
                     <li>
-                        <Link href='/admin/notifications' passHref>
-                            <a className='dropdown-item d-flex flex-row justify-content-between'>
+                        <Link href='#' passHref>
+                            <a onClick={oppenNotifications} className='dropdown-item d-flex flex-row justify-content-between'>
                                 Notificações
-                                <i className='bi bi-bell-fill' />
+                                <i className='bi bi-bell-fill position-relative'>
+                                    <i className='bi bi-circle-fill fs-6 text-cm-danger position-absolute top-0 end-0 bubbleNotification' />
+                                </i>
                             </a>
                         </Link>
                     </li>

@@ -14,12 +14,6 @@ export default function MenusScreen({ menus, notifications }){
             'href': '#'
         }
     };
-    const bread = {
-        '1':'&gt;',
-        '2': 'admin',
-        '3': '&gt;',
-        '4': 'menus'
-    };
 
     return (
         <>
@@ -35,7 +29,6 @@ export default function MenusScreen({ menus, notifications }){
                             color='cm-secondary' 
                             title='Menus' 
                             icon='bi bi-menu-button-wide-fill'
-                            bread={bread} 
                             options={options}    
                         />
                     </section>

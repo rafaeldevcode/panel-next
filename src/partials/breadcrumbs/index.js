@@ -1,15 +1,21 @@
 import Link from "next/link";
 import { deleteAllItems } from '../../services/deleteItems';
+import { useRouter } from 'next/router';
 
-export default function Breadcrumbs({ type, color, title, bread, icon, options }){
+export default function Breadcrumbs({ type, color, title, icon, options }){
+    const router = useRouter();
+    var pathName = router.pathname;
+        pathName = pathName.split('/');
+        pathName.shift()
+
     return (
-        <div className='border-bottom mb-3 d-flex justify-content-between align-items-end'>
+        <div className='border-bottom mb-3 d-flex justify-content-between flex-column flex-md-row align-items-start align-items-md-end'>
             <div>
                 <div>
                     <ul className='p-0 d-flex flex-nowrap text-cm-secondary'>
                         <li className='mx-2'><span className={`badge bg-${color} rounded-fill`}>{type}</span></li>
-                        {Object.keys(bread).map((key)=>(    
-                            <li key={key} className='mx-2' dangerouslySetInnerHTML={{__html: bread[key]}} />
+                        {pathName.map((path, key)=>(
+                            <li key={key} className='mx-2' dangerouslySetInnerHTML={{__html: `&gt;&emsp;${path}`}} />
                         ))}
                     </ul>
                 </div>
@@ -20,7 +26,7 @@ export default function Breadcrumbs({ type, color, title, bread, icon, options }
                 </div>
             </div>
 
-            {options && <div className='mb-3'>
+            {options && <div className='mb-3 mx-auto mx-md-0'>
                 {options.add && <Link href={options.add.href} passHref>
                     <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
                 </Link>}

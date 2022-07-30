@@ -14,12 +14,6 @@ export default function PermissionsScreen({ permisions, menus, notifications }){
             'href': '#'
         }
     };
-    const bread = {
-        '1':'&gt;',
-        '2': 'admin',
-        '3': '&gt;',
-        '4': 'permissions'
-    };
 
     return (
         <>
@@ -35,7 +29,6 @@ export default function PermissionsScreen({ permisions, menus, notifications }){
                             color='cm-secondary' 
                             title='Permições' 
                             icon='bi bi-file-earmark-lock-fill'
-                            bread={bread} 
                             options={options}
                         />
                     </section>

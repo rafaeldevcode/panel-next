@@ -8,23 +8,32 @@ export default function PermissionsBodyScreen({ permisions }){
             <table className='table table-hover'>
                 <thead>
                     <tr>
-                        <th className='col'>Nome</th>
-                        <th className='col'>Permição</th>
-                        <th className='col'>Ações</th>
                         <th className='col'>
                             <input type='checkbox' onClick={selectSeveral} />
                         </th>
+                        <th className='col'>Nome</th>
+                        <th className='col'>Permição</th>
+                        <th className='col'>Ações</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     {Object.keys(permisions).map((key) => (
                         <tr key={permisions[key].id}>
-                            <td>{permisions[key].name}</td>
+                            <td className='col'>
+                                <input 
+                                    data-route={`/admin/permisions/delete/${permisions[key].id}`} 
+                                    data-message={`Esta ação irá remover todas as permições selecionadas!`} 
+                                    type='checkbox' 
+                                    name='selectSeveral[]' 
+                                    onClick={disableEnableBtn} 
+                                />
+                            </td>
+                            <td className='col'>{permisions[key].name}</td>
                             <td>{permisions[key].permision}</td>
                             <td>
                                 <Link href={`/admin/permisions/${permisions[key].id}`} passHref>
-                                    <a title={`Editar permição ${permisions[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold me-1'>
+                                    <a title={`Editar permição ${permisions[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold m-1'>
                                         <i className='bi bi-pencil-square' />
                                     </a>
                                 </Link>
@@ -35,7 +44,7 @@ export default function PermissionsBodyScreen({ permisions }){
                                     data-message={`Esta ação irá remover a permição "${permisions[key].name}"!`}
                                     type='button' 
                                     title={`Remover permição ${permisions[key].name}`}
-                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold ms-1'
+                                    className='btn btn-sm btn-cm-danger text-cm-light fw-bold m-1'
                                 >
                                     <i 
                                         data-route={`/admin/permisions/delete/${permisions[key].id}`} 
@@ -44,15 +53,6 @@ export default function PermissionsBodyScreen({ permisions }){
                                     />
                                 </button>
                             </td>
-                            <th className='col'>
-                                <input 
-                                    data-route={`/admin/permisions/delete/${permisions[key].id}`} 
-                                    data-message={`Esta ação irá remover todas as permições selecionadas!`} 
-                                    type='checkbox' 
-                                    name='selectSeveral[]' 
-                                    onClick={disableEnableBtn} 
-                                />
-                            </th>
                         </tr>
                     ))}
                 </tbody>

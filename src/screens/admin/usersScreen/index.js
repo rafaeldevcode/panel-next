@@ -14,12 +14,6 @@ export default function UsersScreen({ users, menus, notifications }){
             'href': '#'
         }
     };
-    const bread = {
-        '1':'&gt;',
-        '2': 'admin',
-        '3': '&gt;',
-        '4': 'users'
-    };
 
     return (
         <>
@@ -34,8 +28,7 @@ export default function UsersScreen({ users, menus, notifications }){
                             type='Listar' 
                             color='cm-secondary' 
                             title='Usuários'
-                            icon='bi bi-people-fill' 
-                            bread={bread}
+                            icon='bi bi-people-fill'
                             options={options}
                         />
                     </section>

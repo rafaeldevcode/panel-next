@@ -15,12 +15,7 @@ export default function DashboardScreen({ menus, notifications }){
                     <Header />
 
                     <section className='p-3'>
-                        <Breadcrumbs type='Visualizar' color='cm-secondary' title='Dashboard' icon='bi bi-speedometer' bread={{
-                            '1':'&gt;',
-                            '2': 'admin',
-                            '3': '&gt;',
-                            '4': 'dashboard'
-                        }} />
+                        <Breadcrumbs type='Visualizar' color='cm-secondary' title='Dashboard' icon='bi bi-speedometer' />
                     </section>
 
                     <DashboardBodyScreen/>
