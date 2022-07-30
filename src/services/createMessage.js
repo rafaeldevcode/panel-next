@@ -1,18 +1,18 @@
 export const createMessage = ( messageText, typeMessage ) => {
-    const div = document.createElement('div');
-        div.setAttribute('class', `position-fixed end-0 top-0 m-2 p-2 border border-cm-${typeMessage} border-4 rounded`);
-        div.setAttribute('data-message', 'true');
+    const div = $('<div />');
+        div.attr('class', `position-fixed end-0 top-0 m-2 p-2 border border-cm-${typeMessage} border-4 rounded`);
+        div.attr('data-message', 'true');
 
-    const message = document.createElement('p');
-        message.setAttribute('class', `m-0 text-cm-${typeMessage}`);
-        message.innerHTML = messageText;
+    const message = $('<p />');
+        message.attr('class', `m-0 text-cm-${typeMessage}`);
+        message.text(messageText);
 
-        div.appendChild(message);
+        div.append(message);
 
-        document.querySelector('body').appendChild(div);
+        $('body').append(div);
 
         setTimeout(()=>{
-            div.setAttribute('data-message', 'false');
+            div.attr('data-message', 'false');
 
             setTimeout(() => {
                 div.remove();

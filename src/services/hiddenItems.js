@@ -6,7 +6,7 @@ export function hiddenItems(selectors, pixels){
             const items = document.querySelectorAll(selector);
 
                 items.forEach(item => {
-                    item.setAttribute('hidden', true);
+                    $(item).attr('hidden', true);
                 })
         })
     }

@@ -1,6 +1,6 @@
 export function disableEnableBtn(){
     const inputs = document.querySelectorAll('input[name="selectSeveral[]"]');
-    const btnDeleteAll = document.getElementById('deleteAll');
+    const btnDeleteAll = $('#deleteAll');
     const checkeds = [];
 
     inputs.forEach((input)=>{
@@ -8,9 +8,9 @@ export function disableEnableBtn(){
     })
 
     if(inArray(true, checkeds)){
-        btnDeleteAll.classList.remove('disabled');
+        btnDeleteAll.removeClass('disabled');
     }else{
-        btnDeleteAll.classList.add('disabled');
+        btnDeleteAll.addClass('disabled');
     };
 
     function inArray(value, array) {
@@ -28,20 +28,20 @@ export function selectSeveral(event){
 
     const input = event.target;
     const inputs = document.querySelectorAll('input[name="selectSeveral[]"]');
-    const btnDeleteAll = document.getElementById('deleteAll');
+    const btnDeleteAll = $('#deleteAll');
     
     if(input.checked){
         inputs.forEach((input)=>{
             input.checked = true;
         });
 
-        btnDeleteAll.classList.remove('disabled');
+        btnDeleteAll.removeClass('disabled');
     }else{
         inputs.forEach((input)=>{
             input.checked = false;
         });
 
-        btnDeleteAll.classList.add('disabled');
+        btnDeleteAll.addClass('disabled');
     }
 }
 

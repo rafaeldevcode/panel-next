@@ -4,13 +4,13 @@ export const showPass = (event) => {
     const icone = event.target;
 
     if(inputPass.type === 'password'){
-        inputPass.setAttribute('type', 'text');
-        inputPass.classList.remove('bi-eye-fill');
-        icone.classList.add('bi-eye-slash-fill');
+        $(inputPass).attr('type', 'text');
+        $(inputPass).removeClass('bi-eye-fill');
+        $(icone).addClass('bi-eye-slash-fill');
     }else{
-        inputPass.setAttribute('type', 'password');
-        icone.classList.remove('bi-eye-slash-fill');
-        icone.classList.add('bi-eye-fill');
+        $(inputPass).attr('type', 'password');
+        $(icone).removeClass('bi-eye-slash-fill');
+        $(icone).removeClass('bi-eye-fill');
     }
 }
 
@@ -44,11 +44,11 @@ function validateField(field){
         let spanError = field.parentNode.querySelector('span.validit');
 
         if(message){
-            spanError.innerHTML = `${message} <i class="bi bi-x-circle-fill"></i>`;
-            spanError.setAttribute('data-valid', 'false')
+            $(spanError).html(`${message} <i class="bi bi-x-circle-fill"></i>`);
+            $(spanError).attr('data-valid', 'false')
         }else{
-            spanError.innerHTML = 'Válido! <i class="bi bi-check-circle-fill"></i>';
-            spanError.setAttribute('data-valid', 'true')
+            $(spanError).html('Válido! <i class="bi bi-check-circle-fill"></i>');
+            $(spanError).attr('data-valid', 'true')
         }
     };
 

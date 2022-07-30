@@ -1,50 +1,52 @@
 export function oppenClosedMenu(event){
     const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-    const menu = document.querySelector('#menu');
-    const aside = document.querySelector('aside');
+    const menu = $('#menu');
+    const aside = $('aside');
     const items = document.querySelectorAll('div[data-item-active]');
-    const divBtn = document.querySelector('#divClosed');
+    const divBtn = $('#divClosed');
 
     if(width <= 750){
         
         if(event.target.checked){
-            menu.classList.add('menuMobileOppen');
+            menu.addClass('menuMobileOppen');
 
-            aside.setAttribute('data-expanded', 'mobile-active');
-            divBtn.classList.add('divClosed');
-            divBtn.setAttribute('data-divbtn-closed', 'active');
+            aside.attr('data-expanded', 'mobile-active');
+            divBtn.addClass('divClosed');
+            divBtn.attr('data-divbtn-closed', 'active');
 
         }else{
-            menu.classList.remove('menuMobileOppen');
-            divBtn.setAttribute('data-divbtn-closed', 'desactive');
+            menu.removeClass('menuMobileOppen');
+            divBtn.attr('data-divbtn-closed', 'desactive');
 
-            document.querySelector('#checkbox-menu').checked = false;
+            document.getElementById('checkbox-menu').checked = false;
 
             setTimeout(()=>{
-                aside.setAttribute('data-expanded', 'mobile-desactive');
-                divBtn.classList.remove('divClosed');
+                aside.attr('data-expanded', 'mobile-desactive');
+                divBtn.removeClass('divClosed');
             }, 200);
         }
     }else{
 
         if(event.target.checked){
-            aside.setAttribute('data-expanded', 'active');
+            aside.attr('data-expanded', 'active');
 
             items.forEach((item)=>{
                 item.parentNode.querySelector('i').classList.remove('iconManu');
-                item.classList.remove('dNone');
-                item.setAttribute('data-item-active', 'true');
+
+                $(item).removeClass('dNone');
+                $(item).attr('data-item-active', 'true');
             });
         }else{
-            aside.setAttribute('data-expanded', 'desactive');
+            aside.attr('data-expanded', 'desactive');
 
             items.forEach((item)=>{
-                item.setAttribute('data-item-active', 'false');
+                $(item).attr('data-item-active', 'false');
 
                 setTimeout(()=>{
                     item.parentNode.querySelector('i').classList.add('iconManu');
-                    item.classList.add('dNone');
+
+                    $(item).addClass('dNone');
                 }, 600);
             });
         }

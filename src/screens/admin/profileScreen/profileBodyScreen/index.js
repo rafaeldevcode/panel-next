@@ -85,25 +85,17 @@ export default function ProfileBodyScreen(){
 
     function handleChange(event){
         if(event.target.value === ''){
-            document.getElementById('password').removeAttribute('required');
-            document.getElementById('currentPassword').removeAttribute('required');
+            $('#password').attr('required', false);
+            $('#currentPassword').attr('required', false);
         }else{
-            document.getElementById('password').required = true;
-            document.getElementById('currentPassword').required = true;
+            $('#password').attr('required', true);
+            $('#currentPassword').attr('required', true);
         }
 
         getFields();
     }
 
     function saveData(event){
-        event.preventDefault();
-
-        const name = document.getElementById('name');
-        const email = document.getElementById('email');
-        const permissions = document.getElementById('permissions');
-        const dateOfBirth = document.getElementById('dateOfBirth');
-        const currentPassword = document.getElementById('currentPassword');
-        const password = document.getElementById('password');
 
     }; 
 }
