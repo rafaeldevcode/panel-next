@@ -3,18 +3,9 @@ import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
-import PermissionsBodyScreen from './permissionsBodyScreen';
+import AddEditBody from './addEditBodyScreen';
 
-export default function PermissionsScreen({ permisions, menus, notifications }){
-    const options = {
-        'add': {
-            'href': '/admin/permissions/add'
-        },
-        'delete': {
-            'href': '#'
-        }
-    };
-
+export default function AddEditPermissions({ menus, notifications }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
@@ -25,15 +16,14 @@ export default function PermissionsScreen({ permisions, menus, notifications }){
 
                     <section className='p-3'>
                         <Breadcrumbs 
-                            type='Listar' 
-                            color='cm-secondary' 
+                            type='Adicionar' 
+                            color='cm-success' 
                             title='Permições' 
                             icon='bi bi-file-earmark-lock-fill'
-                            options={options}
                         />
                     </section>
 
-                    <PermissionsBodyScreen permisions={permisions.permisions} />
+                    <AddEditBody menus={menus.menus} />
                 </section>
 
                 <Notification notifications={notifications.notifications} />

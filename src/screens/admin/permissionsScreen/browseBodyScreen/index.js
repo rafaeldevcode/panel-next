@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModalDelete from '../../../../partials/modalDelete';
 import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../services/deleteItems';
 
-export default function PermissionsBodyScreen({ permisions }){
+export default function BrowseBody({ permisions }){
     return (
         <section className='p-5 bg-cm-grey m-3 rounded shadow'>
             <table className='table table-hover'>
