@@ -1,14 +1,16 @@
 import NotificationsScreen from "../../../screens/admin/notificationsScreen";
-import { getAllMenus, getAllNotifications } from "../../../services/consultAPI";
+import { getAllMenus, getAllNotifications, getAllUsers } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
     const menus = await getAllMenus();
     const notifications = await getAllNotifications();
+    const user = await getAllUsers();
     
     return {
         props: {
             notifications: notifications,
-            menus: menus
+            menus: menus,
+            user: user.users[0]
         }
     }
 }

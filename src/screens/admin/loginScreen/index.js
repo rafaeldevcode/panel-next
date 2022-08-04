@@ -70,17 +70,19 @@ export default function LoginScreen(){
 
     function sendLogin(event){
         event.preventDefault();
-        authService
-            .login({
-                username: values.username,
-                password: values.password
-            })
-            .then(() => {
-                
+        
+        fetch('http://localhost:3000/api/users/list')
+        .then((response)=>{
+            return response.json();
+        })
+        .then((response)=>{
+            const user = response.users[0];
+
+            if(user.email == values.username && user.password == values.password){
                 router.push('/admin/dashboard');
-            })
-            .catch(() => {
-                createMessage('Usuário ou senha inválidos!', 'danger');
-            })
+            }else{
+                createMessage('Usuário ou senha inválidos, tente novamente!', 'cm-danger');
+            }
+        });
     }; 
 }

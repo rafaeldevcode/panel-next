@@ -1,16 +1,18 @@
 import PermissionsScreen from "../../../screens/admin/permissionsScreen/browsePermissions";
-import { getAllMenus, getAllPermisions, getAllNotifications } from "../../../services/consultAPI";
+import { getAllMenus, getAllPermissions, getAllNotifications, getAllUsers } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
     const menus = await getAllMenus();
-    const permisions = await getAllPermisions();
+    const permissions = await getAllPermissions();
     const notifications = await getAllNotifications();
+    const user = await getAllUsers();
     
     return {
         props: {
-            permisions: permisions,
+            permissions: permissions,
             menus: menus,
-            notifications: notifications
+            notifications: notifications,
+            user: user.users[0]
         }
     }
 }

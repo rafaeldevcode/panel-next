@@ -5,7 +5,7 @@ import Breadcrumbs from '../../../partials/breadcrumbs';
 import MenusBodyScreen from './menusBodyScreen';
 import Notification from '../../../partials/notifications';
 
-export default function MenusScreen({ menus, notifications }){
+export default function MenusScreen({ menus, notifications, user }){
     const options = {
         'add': {
             'href': '/admin/menus/add'
@@ -18,7 +18,7 @@ export default function MenusScreen({ menus, notifications }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar menus={menus.menus} />
+                <Sidebar menus={menus.menus} user={user} />
 
                 <section className='w-100'>
                     <Header />

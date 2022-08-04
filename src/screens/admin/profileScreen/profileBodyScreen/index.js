@@ -8,7 +8,7 @@ import InputButton from '../../../../partials/form/inputButton';
 import { useEffect } from "react";
 import { getFields } from "../../../../services/validitForm";
 
-export default function ProfileBodyScreen(){
+export default function ProfileBodyScreen({ user }){
     useEffect(()=>{
         getFields();
     }, []);
@@ -21,8 +21,8 @@ export default function ProfileBodyScreen(){
                 <div className='mx-auto position-relative profile-user'>
                     <Image 
                         className='border border-cm-primary'
-                        src='/assets/images/users/iron_man.png'
-                        alt='Rafael Vieira'
+                        src={user.photo}
+                        alt={user.name}
                         width={137}
                         height={137}
                         layout='responsive'
@@ -40,18 +40,22 @@ export default function ProfileBodyScreen(){
                 </div>
                 
                 <div className='position-absolute top-0 start-0 m-3 text-cm-primary fw-bold display-4'>
-                    Rafael Vieira
+                    {user.name}
                 </div>
             </div>
 
             <form onSubmit={saveData}>
                 <div className='row d-flex justify-content-between'>
                     <div className='col-12 col-md-6'>
-                        <InputText label='Nome' name='name' icon='bi bi-person-fill' value='Rafael vieira' required />
+                        <InputText label='Nome' name='name' icon='bi bi-person-fill' value={user.name} required />
                     </div>
 
                     <div className='col-12 col-md-6'>
-                        <InputEmail label='Email' name='email' icon='bi bi-envelope-fill' value='rafaeldevcode@gmail.com' required disabled />
+                        <InputEmail label='Email' name='email' icon='bi bi-envelope-fill' value={user.email} required disabled />
+                    </div>
+
+                    <div className='col-12 col-md-6'>
+                        <InputEmail label='Telefone' name='phone' icon='bi bi-phone-fill' value={user.phone} required />
                     </div>
 
                     <div className='col-12 col-md-6'>
@@ -62,7 +66,7 @@ export default function ProfileBodyScreen(){
                     </div>
 
                     <div className='col-12 col-md-6'>
-                        <InputDate label='Data de nascimento' name='dateOfBirth' icon='bi bi-calendar-fill' />
+                        <InputDate label='Data de nascimento' name='dateOfBirth' icon='bi bi-calendar-fill' value={user.dateOfBirth} />
                     </div>
 
                     <div className='col-12 col-md-6'>
@@ -71,6 +75,10 @@ export default function ProfileBodyScreen(){
 
                     <div className='col-12 col-md-6'>
                         <InputPass label='Nova senha' name='password' onChange={handleChange} />
+                    </div>
+
+                    <div className='col-12 col-md-6'>
+                        <InputPass label='Repita Nova senha' name='repeatPassword' onChange={handleChange} />
                     </div>
                 </div>
 
@@ -87,9 +95,11 @@ export default function ProfileBodyScreen(){
         if(event.target.value === ''){
             $('#password').attr('required', false);
             $('#currentPassword').attr('required', false);
+            $('#repeatPassword').attr('required', false);
         }else{
             $('#password').attr('required', true);
             $('#currentPassword').attr('required', true);
+            $('#repeatPassword').attr('required', true);
         }
 
         getFields();

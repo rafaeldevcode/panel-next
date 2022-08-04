@@ -10,7 +10,7 @@ export const showPass = (event) => {
     }else{
         $(inputPass).attr('type', 'password');
         $(icone).removeClass('bi-eye-slash-fill');
-        $(icone).removeClass('bi-eye-fill');
+        $(icone).addClass('bi-eye-fill');
     }
 }
 

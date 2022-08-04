@@ -6,11 +6,11 @@ import ModalImagesProfile from './partials/modalImagesProfile';
 import Notification from '../../../partials/notifications';
 import ProfileBodyScreen from './profileBodyScreen';
 
-export default function ProfileScreen({ menus, notifications }){
+export default function ProfileScreen({ menus, notifications, user, permissions }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar menus={menus.menus} />
+                <Sidebar menus={menus.menus} user={user} />
 
                 <section className='w-100'>
                     <Header />
@@ -19,7 +19,7 @@ export default function ProfileScreen({ menus, notifications }){
                         <Breadcrumbs type='Editar' color='cm-primary' title='Perfil' icon='bi bi-person-bounding-box' />
                     </section>
 
-                    <ProfileBodyScreen />
+                    <ProfileBodyScreen user={user} />
                 </section>
 
                 <Notification notifications={notifications.notifications} />

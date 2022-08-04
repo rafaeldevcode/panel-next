@@ -3,21 +3,21 @@ export default function handler(req, res) {
             return res
                 .status(200)
                 .json({ 
-                    permisions: {
+                    permissions: {
                         0: {
                             id: 0,
                             name: 'Admin',
-                            permision: 'admin',
+                            permission: 'admin',
                         },
                         1: {
                             id: 1,
                             name: 'Editor',
-                            permision: 'editor',
+                            permission: 'editor',
                         },
                         2: {
                             id: 2,
                             name: 'User',
-                            permision: 'user',
+                            permission: 'user',
                         }
                     }
                 })

@@ -5,7 +5,7 @@ import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
 import BrowseBody from './browseBodyScreen';
 
-export default function BrowsePermissions({ permisions, menus, notifications }){
+export default function BrowsePermissions({ permissions, menus, notifications, user }){
     const options = {
         'add': {
             'href': '/admin/permissions/add'
@@ -18,7 +18,7 @@ export default function BrowsePermissions({ permisions, menus, notifications }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar menus={menus.menus} />
+                <Sidebar menus={menus.menus} user={user} />
 
                 <section className='w-100'>
                     <Header />
@@ -33,7 +33,7 @@ export default function BrowsePermissions({ permisions, menus, notifications }){
                         />
                     </section>
 
-                    <BrowseBody permisions={permisions.permisions} />
+                    <BrowseBody permissions={permissions.permissions} />
                 </section>
 
                 <Notification notifications={notifications.notifications} />

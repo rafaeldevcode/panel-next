@@ -2,15 +2,15 @@ import Image from "next/image";
 import Link from 'next/link';
 import { oppenNotifications } from "../../services/oppenNotifications";
 
-export default function Profile(){
+export default function Profile({ user }){
     return (
         <div className='d-flex flex-nowrap align-items-center shadow p-2 profile'>
             <div className='user'>
                 <Link href='/admin/profile' passHref>
-                    <a title="Editar perfil de Rafael Vieira">
+                    <a title={`Editar perfil de ${user.name}`}>
                         <Image
-                            src='/assets/images/users/iron_man.png'
-                            alt='Rafael Vieira'
+                            src={user.photo}
+                            alt={user.name}
                             width={137}
                             height={137}
                             layout='responsive'
@@ -23,7 +23,7 @@ export default function Profile(){
             </div>
             <div className='btn-group hiddeItem dNone profile-dropdawn'  data-item-active='false'>
                 <button type='button' title='Perfil' className='btn profile-dropdawn-btn w-100 dropdown-toggle text-cm-light fw-bold' data-bs-toggle='dropdown' aria-expanded='false'>
-                    Rafael Vieira
+                    {user.name}
                 </button>
                 <ul className='dropdown-menu dropdown-menu-dark'>
                     <li>

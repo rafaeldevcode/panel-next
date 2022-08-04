@@ -10,8 +10,8 @@ export async function getAllUsers(){
     return users;
 }
 
-export async function getAllPermisions(){
-    const permisions = await fetch('http://localhost:3000/api/permisions/list')
+export async function getAllPermissions(){
+    const permissions = await fetch('http://localhost:3000/api/permissions/list')
         .then((response)=>{
             return response.json();
         })
@@ -19,7 +19,7 @@ export async function getAllPermisions(){
             return response;
         });
 
-        return permisions;
+        return permissions;
 }
 
 export async function getAllMenus(){

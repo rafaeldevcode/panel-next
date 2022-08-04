@@ -5,11 +5,11 @@ import Sidebar from "../../../partials/sidebar";
 import Notification from '../../../partials/notifications';
 import TermsBodyScreen from "./termsBodyScreen";
 
-export default function TermsScreen({ menus, notifications }){
+export default function TermsScreen({ menus, notifications, user }){
     return (
         <>
             <section className='d-flex flex-nowrap justify-content-between'>
-                <Sidebar menus={menus.menus} />
+                <Sidebar menus={menus.menus} user={user} />
 
                 <section className='w-100'>
                     <Header />

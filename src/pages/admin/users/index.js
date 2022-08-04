@@ -10,7 +10,8 @@ export async function getStaticProps(){
         props: {
             users: users,
             menus: menus,
-            notifications: notifications
+            notifications: notifications,
+            user: users.users[0]
         }
     }
 }

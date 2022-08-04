@@ -2,11 +2,11 @@ import Profile from "../profile";
 import Link from 'next/link';
 import { oppenClosedMenu } from "../../services/oppenClosedMenu";
 
-export default function Sidebar({ menus }){
+export default function Sidebar({ menus, user }){
     return (
         <>
             <aside className='bg-cm-secondary sidebar'>
-                <Profile />
+                <Profile user={user} />
 
                 <nav>
                     <ul className='m-0 p-2'>
