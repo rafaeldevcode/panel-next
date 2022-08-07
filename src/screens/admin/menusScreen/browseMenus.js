@@ -2,10 +2,10 @@ import Footer from '../../../partials/footer';
 import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
-import MenusBodyScreen from './menusBodyScreen';
+import BrowseBodyScreen from './browseBodyScreen';
 import Notification from '../../../partials/notifications';
 
-export default function MenusScreen({ menus, notifications, user }){
+export default function BrowseMenus({ menus, notifications, user }){
     const options = {
         'add': {
             'href': '/admin/menus/add'
@@ -34,7 +34,7 @@ export default function MenusScreen({ menus, notifications, user }){
                         />
                     </section>
 
-                    <MenusBodyScreen menus={menus.menus} />
+                    <BrowseBodyScreen menus={menus.menus} />
                 </section>
 
                 <Notification notifications={notifications.notifications} />

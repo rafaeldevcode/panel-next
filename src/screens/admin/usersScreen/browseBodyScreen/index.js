@@ -6,7 +6,7 @@ import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../service
 import { hiddenItems } from "../../../../services/hiddenItems";
 import TableFooter from '../../../../partials/tableFooter';
 
-export default function UsersBodyScreen({ users }){
+export default function BrowseBodyScreen({ users }){
     useEffect(()=>{
         hiddenItems(['td[data-col="email"]', 'th[data-row="email"]'], 576);
     }, []);

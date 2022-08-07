@@ -5,7 +5,7 @@ import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../service
 import { hiddenItems } from "../../../../services/hiddenItems";
 import TableFooter from '../../../../partials/tableFooter';
 
-export default function MenusBodyScreen({ menus }){
+export default function BrowseBodyScreen({ menus }){
     useEffect(()=>{
         hiddenItems([
             'td[data-col="slug"]', 

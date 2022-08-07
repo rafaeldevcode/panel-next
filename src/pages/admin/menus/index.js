@@ -1,4 +1,4 @@
-import MenusScreen from "../../../screens/admin/menusScreen";
+import BrowseMenus from "../../../screens/admin/menusScreen/browseMenus";
 import { getAllMenus, getAllNotifications, getAllUsers } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
@@ -15,4 +15,4 @@ export async function getStaticProps(){
     }
 }
 
-export default MenusScreen;
+export default BrowseMenus;

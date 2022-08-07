@@ -1,4 +1,4 @@
-import UsersScreen from "../../../screens/admin/usersScreen";
+import BrowseUsers from "../../../screens/admin/usersScreen/browseUsers";
 import { getAllMenus, getAllUsers, getAllNotifications } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
@@ -16,4 +16,4 @@ export async function getStaticProps(){
     }
 }
 
-export default UsersScreen;
+export default BrowseUsers;

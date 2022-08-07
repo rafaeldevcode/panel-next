@@ -1,5 +1,5 @@
-import BrowseNotifications from "../../../screens/admin/notificationsScreen/browseNotifications";
-import { getAllMenus, getAllNotifications, getAllUsers } from "../../../services/consultAPI";
+import AddEditUsers from "../../../../screens/admin/usersScreen/addEditUsers";
+import { getAllMenus, getAllNotifications, getAllUsers } from "../../../../services/consultAPI";
 
 export async function getStaticProps(){
     const menus = await getAllMenus();
@@ -8,11 +8,11 @@ export async function getStaticProps(){
     
     return {
         props: {
-            notifications: notifications,
             menus: menus,
+            notifications: notifications,
             user: user.users[0]
         }
     }
 }
 
-export default BrowseNotifications;
+export default AddEditUsers;

@@ -3,12 +3,12 @@ import Header from '../../../partials/header';
 import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
-import NotificationsBodyScreen from './notificationsBodyScreen';
+import BrowseBodyScreen from './browseBodyScreen';
 
-export default function NotificationsScreen({ notifications, menus, user }){
+export default function BrowseUsers({ users, menus, notifications, user }){
     const options = {
         'add': {
-            'href': '/admin/notifications/add'
+            'href': '/admin/users/add'
         },
         'delete': {
             'href': '#'
@@ -28,13 +28,13 @@ export default function NotificationsScreen({ notifications, menus, user }){
                         <Breadcrumbs 
                             type='Listar' 
                             color='cm-secondary' 
-                            title='Notificações' 
-                            icon='bi bi-bell-fill'
-                            options={options}    
+                            title='Usuários'
+                            icon='bi bi-people-fill'
+                            options={options}
                         />
                     </section>
 
-                    <NotificationsBodyScreen notifications={notifications.notifications} />
+                    <BrowseBodyScreen users={users.users} />
                 </section>
 
                 <Notification notifications={notifications.notifications} />

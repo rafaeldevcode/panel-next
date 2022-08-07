@@ -1,4 +1,4 @@
-import PermissionsScreen from "../../../screens/admin/permissionsScreen/browsePermissions";
+import BrowsePermissions from "../../../screens/admin/permissionsScreen/browsePermissions";
 import { getAllMenus, getAllPermissions, getAllNotifications, getAllUsers } from "../../../services/consultAPI";
 
 export async function getStaticProps(){
@@ -17,4 +17,4 @@ export async function getStaticProps(){
     }
 }
 
-export default PermissionsScreen;
+export default BrowsePermissions;
