@@ -27,16 +27,18 @@ export default function Breadcrumbs({ type, color, title, icon, options }){
                 </div>
             </div>
 
-            {options && <div className='d-flex mb-3 mx-auto mx-md-0'>
+            {options && <div className='d-flex flex-column flex-sm-row mb-3 mx-auto mx-md-0'>
                 {options.search && <InputSearch />}
 
-                {options.add && <Link href={options.add.href} passHref>
-                    <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
-                </Link>}
+                <div className='d-flex justify-content-center'>
+                    {options.add && <Link href={options.add.href} passHref>
+                        <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
+                    </Link>}
 
-                {options.delete && <button onClick={deleteAllItems} id='deleteAll' type='button' title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>
-                    Remover
-                </button>}
+                    {options.delete && <button onClick={deleteAllItems} id='deleteAll' type='button' title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>
+                        Remover
+                    </button>}
+                </div>
             </div>}
         </div>
     )
