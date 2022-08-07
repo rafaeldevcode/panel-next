@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import ModalDelete from '../../../../partials/modalDelete';
 import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../services/deleteItems';
 import { hiddenItems } from "../../../../services/hiddenItems";
+import TableFooter from '../../../../partials/tableFooter';
 
 export default function MenusBodyScreen({ menus }){
     useEffect(()=>{
@@ -16,7 +17,7 @@ export default function MenusBodyScreen({ menus }){
 
     return (
         <section className='p-5 bg-cm-grey m-3 rounded shadow'>
-            <table className='table table-hover'>
+            <table className='table table-hover mb-0'>
                 <thead>
                     <tr>
                         <th className='col'>
@@ -73,6 +74,7 @@ export default function MenusBodyScreen({ menus }){
                 </tbody>
             </table>
 
+            <TableFooter />
             <ModalDelete />
         </section>
     );

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import ModalDelete from '../../../../partials/modalDelete';
 import { selectSeveral, disableEnableBtn, deleteItem } from '../../../../services/deleteItems';
+import TableFooter from '../../../../partials/tableFooter';
 
 export default function BrowseBody({ permissions }){
     return (
         <section className='p-5 bg-cm-grey m-3 rounded shadow'>
-            <table className='table table-hover'>
+            <table className='table table-hover mb-0'>
                 <thead>
                     <tr>
                         <th className='col'>
@@ -58,6 +59,7 @@ export default function BrowseBody({ permissions }){
                 </tbody>
             </table>
 
+            <TableFooter />
             <ModalDelete />
         </section>
     );
