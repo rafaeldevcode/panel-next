@@ -5,7 +5,7 @@ import TableFooter from '../../../../partials/tableFooter';
 
 export default function NotificationsBodyScreen({ notifications }){
     return (
-        <section className='p-5 bg-cm-grey m-3 rounded shadow'>
+        <section className='p-3 p-sm-5 bg-cm-grey m-3 rounded shadow'>
             <table className='table table-hover mb-0'>
                 <thead>
                     <tr>
