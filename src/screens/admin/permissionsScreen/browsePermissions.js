@@ -12,7 +12,8 @@ export default function BrowsePermissions({ permissions, menus, notifications, u
         },
         'delete': {
             'href': '#'
-        }
+        },
+        'search': true
     };
 
     return (

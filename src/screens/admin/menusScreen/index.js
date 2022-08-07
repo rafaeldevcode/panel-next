@@ -12,7 +12,8 @@ export default function MenusScreen({ menus, notifications, user }){
         },
         'delete': {
             'href': '#'
-        }
+        },
+        'search': true
     };
 
     return (

@@ -12,7 +12,8 @@ export default function UsersScreen({ users, menus, notifications, user }){
         },
         'delete': {
             'href': '#'
-        }
+        },
+        'search': true
     };
 
     return (

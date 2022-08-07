@@ -12,7 +12,8 @@ export default function NotificationsScreen({ notifications, menus, user }){
         },
         'delete': {
             'href': '#'
-        }
+        },
+        'search': true
     };
 
     return (

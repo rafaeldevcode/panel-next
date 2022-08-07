@@ -18,7 +18,7 @@ export default function AddEditBody({ menus }){
                     </div>
                 </div>
 
-                <div className='d-flex flex-wrap justify-content-evenly'>
+                <div className='d-flex flex-wrap justify-content-between'>
                     {Object.keys(menus).map((key) => (
                         <div className='card p-3 col-md-4 col-12 col-lg-3 m-2' key={menus[key].id}>
                             <h2 className='fs-4'>{menus[key].name}</h2>

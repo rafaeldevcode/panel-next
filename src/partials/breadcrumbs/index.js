@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { deleteAllItems } from '../../services/deleteItems';
 import { useRouter } from 'next/router';
+import InputSearch from "../form/inputSearch";
 
 export default function Breadcrumbs({ type, color, title, icon, options }){
     const router = useRouter();
@@ -26,7 +27,9 @@ export default function Breadcrumbs({ type, color, title, icon, options }){
                 </div>
             </div>
 
-            {options && <div className='mb-3 mx-auto mx-md-0'>
+            {options && <div className='d-flex mb-3 mx-auto mx-md-0'>
+                {options.search && <InputSearch />}
+
                 {options.add && <Link href={options.add.href} passHref>
                     <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
                 </Link>}
