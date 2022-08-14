@@ -1,7 +1,7 @@
 {
     "site": {
-        "name": "Meu painel de login",
-        "description": "Faça su login!",
+        "name": "Rafael Dev Code",
+        "description": "Faça seu login!",
         "login_bg": {
             "src": "/assets/images/login_bg_3.png",
             "type": "png",

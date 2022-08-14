@@ -7,6 +7,7 @@ import InputDate from '../../../../partials/form/inputDate';
 import InputButton from '../../../../partials/form/inputButton';
 import { useEffect } from "react";
 import { getFields } from "../../../../services/validitForm";
+import siteconfig from '../../../../../config/siteconfig.json';
 
 export default function ProfileBodyScreen({ user }){
     useEffect(()=>{
@@ -16,7 +17,9 @@ export default function ProfileBodyScreen({ user }){
     return (
         <section className='p-3 bg-cm-grey m-3 rounded shadow'>
             <div className='position-relative'>
-                <div className='profile-bg' />
+                <div className='profile-bg' style={{
+                backgroundImage: `url('${siteconfig.site.login_bg.src}')`
+            }}  />
 
                 <div className='mx-auto position-relative profile-user'>
                     <Image 
