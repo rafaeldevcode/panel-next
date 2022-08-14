@@ -4,10 +4,12 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import DashboardBodyScreen from './dashboardBodyScreen';
 import Notifications from '../../../partials/notifications';
+import MetasConfig from '../../../partials/MetasConfig';
 
 export default function DashboardScreen({ menus, notifications, user }){
     return (
         <>
+            <MetasConfig title='Dashboard' />
             <section className='d-flex flex-nowrap justify-content-between'>
                 <Sidebar menus={menus.menus} user={user} />
 

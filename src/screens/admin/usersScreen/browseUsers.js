@@ -4,6 +4,7 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
 import BrowseBodyScreen from './browseBodyScreen';
+import MetasConfig from '../../../partials/MetasConfig';
 
 export default function BrowseUsers({ users, menus, notifications, user }){
     const options = {
@@ -18,6 +19,7 @@ export default function BrowseUsers({ users, menus, notifications, user }){
 
     return (
         <>
+            <MetasConfig title='Listar usuários' />
             <section className='d-flex flex-nowrap justify-content-between'>
                 <Sidebar menus={menus.menus} user={user} />
 

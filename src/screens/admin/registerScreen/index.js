@@ -10,6 +10,7 @@ import { getFields } from "../../../services/validitForm";
 import InputEmail from '../../../partials/form/inputEmail';
 import { useRouter } from "next/router";
 import { createMessage } from '../../../services/createMessage';
+import MetasConfig from '../../../partials/MetasConfig';
 
 export default function RegisterScreen(){
     const router = useRouter();
@@ -20,55 +21,58 @@ export default function RegisterScreen(){
     }, []);
 
     return (
-        <section className="vh-100 vw-100 d-flex flex-nowrap">
-            <BgLogin />
+        <>
+            <MetasConfig title='Realizar cadastro' />
+            <section className="vh-100 vw-100 d-flex flex-nowrap">
+                <BgLogin />
 
-            <div className='d-flex flex-column justify-content-center align-items-center col-12 col-lg-5 p-2'>
-                <div className='col-12 col-sm-6 mb-3'>
-                    <Logo image='logo' />
-                </div>
-
-                <form className='col-12 col-sm-6' onSubmit={createUser}>
-                    <InputText label='Nome' name='name' icon='bi bi-person-fill' required onChange={handleChange} />
-
-                    <InputEmail label='Email' name='email' icon='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
-
-                    <InputPass label='Senha' name='password' required onChange={handleChange} />
-
-                    <InputPass label='Confirme sua senha' required name='confirm_password' onChange={handleChange} />
-
-                    <div className='my-4'>
-                        <InputCheckboxSwitch label='Mantenha-me conectado' name='remember' />
-                        
-                        <ul className='d-flex flex-nowrap justify-content-between ps-0'>
-                            <li>
-                                <Link href="/admin/login" passHref>
-                                    <a className='text-cm-primary' title="Realizar login">Realizar login</a>
-                                </Link>
-                            </li>
-                        </ul>
+                <div className='d-flex flex-column justify-content-center align-items-center col-12 col-lg-5 p-2'>
+                    <div className='col-12 col-sm-6 mb-3'>
+                        <Logo image='logo' />
                     </div>
 
-                    <InputButton type='submit' title='Fazer cadastro' value='Registrar' style='cm-primary' />
-                </form>
+                    <form className='col-12 col-sm-6' onSubmit={createUser}>
+                        <InputText label='Nome' name='name' icon='bi bi-person-fill' required onChange={handleChange} />
 
-                <div className='col-12 col-sm-6'>
-                    <button title='Realizar login com Google' className='btn btn-md btn-ligth border border-primary col-12 mb-2 text-left position-relative ps-0'>
-                        <span className='position-absolute left-0 top-0 h-100 d-flex justify-content-center align-items-center px-2'>
-                            <i className="bi bi-google text-primary" />
-                        </span>
-                        Logar com google
-                    </button>
+                        <InputEmail label='Email' name='email' icon='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
 
-                    <button title='Realizar login com Facebook' className='btn btn-md btn-primary border border-primary col-12 mb-2 text-left position-relative ps-0'>
-                        <span className='position-absolute left-0 top-0 h-100 d-flex justify-content-center align-items-center px-2'>
-                            <i className="bi bi-facebook text-light" />
-                        </span>
-                        Logar com facebook
-                    </button>
+                        <InputPass label='Senha' name='password' required onChange={handleChange} />
+
+                        <InputPass label='Confirme sua senha' required name='confirm_password' onChange={handleChange} />
+
+                        <div className='my-4'>
+                            <InputCheckboxSwitch label='Mantenha-me conectado' name='remember' />
+                            
+                            <ul className='d-flex flex-nowrap justify-content-between ps-0'>
+                                <li>
+                                    <Link href="/admin/login" passHref>
+                                        <a className='text-cm-primary' title="Realizar login">Realizar login</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <InputButton type='submit' title='Fazer cadastro' value='Registrar' style='cm-primary' />
+                    </form>
+
+                    <div className='col-12 col-sm-6'>
+                        <button title='Realizar login com Google' className='btn btn-md btn-ligth border border-primary col-12 mb-2 text-left position-relative ps-0'>
+                            <span className='position-absolute left-0 top-0 h-100 d-flex justify-content-center align-items-center px-2'>
+                                <i className="bi bi-google text-primary" />
+                            </span>
+                            Logar com google
+                        </button>
+
+                        <button title='Realizar login com Facebook' className='btn btn-md btn-primary border border-primary col-12 mb-2 text-left position-relative ps-0'>
+                            <span className='position-absolute left-0 top-0 h-100 d-flex justify-content-center align-items-center px-2'>
+                                <i className="bi bi-facebook text-light" />
+                            </span>
+                            Logar com facebook
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 
     function handleChange(event) {

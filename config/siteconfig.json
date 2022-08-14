@@ -3,7 +3,7 @@
         "name": "Meu painel de login",
         "description": "Faça su login!",
         "login_bg": {
-            "src": "/assets/images/login_bg.png",
+            "src": "/assets/images/login_bg_3.png",
             "type": "png",
             "width": 648,
             "height": 520
@@ -16,7 +16,7 @@
                 "height": 84
             },
             "logo-white": {
-                "src": "/assets/images/logo-white.png",
+                "src": "/assets/images/logo_white_2.png",
                 "type": "png",
                 "width": 500,
                 "height": 84

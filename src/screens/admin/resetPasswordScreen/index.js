@@ -6,6 +6,7 @@ import InputNumber from '../../../partials/form/inputNumber';
 import InputPass from '../../../partials/form/inputPass';
 import { createMessage } from "../../../services/createMessage";
 import { getFields } from "../../../services/validitForm";
+import MetasConfig from '../../../partials/MetasConfig';
 
 export default function ResetPasswordScreen(){ 
     const router = useRouter();
@@ -20,41 +21,44 @@ export default function ResetPasswordScreen(){
     }, []);
 
     return (
-        <section className='vw-100 vh-100 d-flex justify-content-center align-items-center p-3'>
-            <div className='border border-1 border-cm-primary rounded px-4 py-5 col-12 col-sm-8 col-md-6 shadow'>
-                {isEmail && <form onSubmit={sendEmail}>
-                    <h1 className='text-center fs-3'>Por favor informe seu email</h1>
+        <>
+            <MetasConfig title='Resetar minha senha' />
+            <section className='vw-100 vh-100 d-flex justify-content-center align-items-center p-3'>
+                <div className='border border-1 border-cm-primary rounded px-4 py-5 col-12 col-sm-8 col-md-6 shadow'>
+                    {isEmail && <form onSubmit={sendEmail}>
+                        <h1 className='text-center fs-3'>Por favor informe seu email</h1>
 
-                    <InputEmail label='Email' name='email' icon='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
+                        <InputEmail label='Email' name='email' icon='bi bi-envelope-fill position-absolute' required onChange={handleChange} />
 
-                    <div className='col-12 d-flex justify-content-end'>
-                        <InputButton type='submit' title='Enviar email' value='Enviar' style='primary' />
-                    </div>
-                </form>}
+                        <div className='col-12 d-flex justify-content-end'>
+                            <InputButton type='submit' title='Enviar email' value='Enviar' style='primary' />
+                        </div>
+                    </form>}
 
-                {isToken && <form onSubmit={verify}>
-                    <h1 className='text-center fs-3'>Enviamos um token de verificação para seu email.</h1>
+                    {isToken && <form onSubmit={verify}>
+                        <h1 className='text-center fs-3'>Enviamos um token de verificação para seu email.</h1>
 
-                    <InputNumber label='Token de verificação' name='token' icon='bi bi-key-fill' required onChange={handleChange} />
+                        <InputNumber label='Token de verificação' name='token' icon='bi bi-key-fill' required onChange={handleChange} />
 
-                    <div className='py-2 col-12 d-flex justify-content-end'>
-                        <InputButton type='submit' title='Verificar email' value='Verificar' style='primary' />
-                    </div>
-                </form>}
+                        <div className='py-2 col-12 d-flex justify-content-end'>
+                            <InputButton type='submit' title='Verificar email' value='Verificar' style='primary' />
+                        </div>
+                    </form>}
 
-                {isPass && <form onSubmit={resetPass}>
-                    <h1 className='text-center fs-3'>Digite sua nova senha</h1>
+                    {isPass && <form onSubmit={resetPass}>
+                        <h1 className='text-center fs-3'>Digite sua nova senha</h1>
 
-                    <InputPass label='Senha' name='password' required onChange={handleChange} />
+                        <InputPass label='Senha' name='password' required onChange={handleChange} />
 
-                    <InputPass label='Confirme sua senha' required name='confirm_password' onChange={handleChange} />
+                        <InputPass label='Confirme sua senha' required name='confirm_password' onChange={handleChange} />
 
-                    <div className='py-2 col-12 d-flex justify-content-end'>
-                        <InputButton type='submit' title='Redefinir senha' value='Verificar' style='cm-primary' />
-                    </div>
-                </form>}
-            </div>
-        </section>
+                        <div className='py-2 col-12 d-flex justify-content-end'>
+                            <InputButton type='submit' title='Redefinir senha' value='Verificar' style='cm-primary' />
+                        </div>
+                    </form>}
+                </div>
+            </section>
+        </>
     );
 
     function handleChange(event) {

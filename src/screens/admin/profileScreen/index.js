@@ -5,10 +5,12 @@ import Breadcrumbs from '../../../partials/breadcrumbs';
 import ModalImagesProfile from './partials/modalImagesProfile';
 import Notification from '../../../partials/notifications';
 import ProfileBodyScreen from './profileBodyScreen';
+import MetasConfig from '../../../partials/MetasConfig';
 
 export default function ProfileScreen({ menus, notifications, user, permissions }){
     return (
         <>
+            <MetasConfig title='Editar perfil' />
             <section className='d-flex flex-nowrap justify-content-between'>
                 <Sidebar menus={menus.menus} user={user} />
 

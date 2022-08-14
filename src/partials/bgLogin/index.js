@@ -3,7 +3,9 @@ import siteconfig from '../../../config/siteconfig.json';
 export default function BgLogin(){
     return (
         <div className='col-7 position-relative section-image-login'>
-            <div className='position-absolute top-0 start-0 image-bg-login' />
+            <div className='position-absolute top-0 start-0 image-bg-login' style={{
+                backgroundImage: `url('${siteconfig.site.login_bg.src}')`
+            }} />
 
             <div className='position-absolute bottom-0 start-0 m-2 d-flex flex-nowrap text-cm-dark'>
                 <div className='me-3'>

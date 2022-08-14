@@ -4,10 +4,12 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
 import AddEditBody from './addEditBodyScreen';
+import MetasConfig from '../../../partials/MetasConfig';
 
 export default function AddEditUsers({ menus, notifications, user }){
     return (
         <>
+            <MetasConfig title='Adicionar usuário' />
             <section className='d-flex flex-nowrap justify-content-between'>
                 <Sidebar menus={menus.menus} user={user} />
 

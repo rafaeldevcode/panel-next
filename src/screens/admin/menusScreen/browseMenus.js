@@ -4,6 +4,7 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import BrowseBodyScreen from './browseBodyScreen';
 import Notification from '../../../partials/notifications';
+import MetasConfig from '../../../partials/MetasConfig';
 
 export default function BrowseMenus({ menus, notifications, user }){
     const options = {
@@ -18,6 +19,7 @@ export default function BrowseMenus({ menus, notifications, user }){
 
     return (
         <>
+            <MetasConfig title='Listar menus' />
             <section className='d-flex flex-nowrap justify-content-between'>
                 <Sidebar menus={menus.menus} user={user} />
 
