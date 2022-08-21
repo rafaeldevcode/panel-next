@@ -5,8 +5,9 @@ import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
 import AddEditBody from './addEditBodyScreen';
 import MetasConfig from '../../../partials/MetasConfig';
+import breadconfig from '../../../../config/breadcrumps.json'
 
-export default function AddEditUsers({ menus, notifications, user }){
+export default function AddEditUsers({ menus, notifications, user, type }){
     return (
         <>
             <MetasConfig title='Adicionar usuário' />
@@ -18,8 +19,8 @@ export default function AddEditUsers({ menus, notifications, user }){
 
                     <section className='p-3'>
                         <Breadcrumbs 
-                            type='Adicionar' 
-                            color='cm-success' 
+                            type={breadconfig[type].text}
+                            color={breadconfig[type].color} 
                             title='Usuários' 
                             icon='bi bi-people-fill'
                         />

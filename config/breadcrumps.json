@@ -1,0 +1,10 @@
+{
+    "add": {
+        "text": "Adicionar",
+        "color": "cm-success"
+    },
+    "edit": {
+        "text": "Editar",
+        "color": "cm-primary"
+    }
+}

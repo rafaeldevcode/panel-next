@@ -33,7 +33,7 @@ export default function BrowseBodyScreen({ notifications }){
                             <td>{notifications[key].name}</td>
                             <td>{notifications[key].status === true ? 'Ativa' : 'Inativa'}</td>
                             <td>
-                                <Link href={`/admin/notifications/${notifications[key].id}`} passHref>
+                                <Link href={`/admin/notifications/edit/${notifications[key].id}`} passHref>
                                     <a title={`Editar nitificação ${notifications[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold m-1'>
                                         <i className='bi bi-pencil-square' />
                                     </a>

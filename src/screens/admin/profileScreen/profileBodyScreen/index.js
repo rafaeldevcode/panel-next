@@ -2,14 +2,15 @@ import Image from "next/image";
 import InputText from '../../../../partials/form/inputText';
 import InputEmail from '../../../../partials/form/inputText';
 import InputPass from '../../../../partials/form/inputPass';
-import InputSelect from '../../../../partials/form/inputSelect';
 import InputDate from '../../../../partials/form/inputDate';
 import InputButton from '../../../../partials/form/inputButton';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getFields } from "../../../../services/validitForm";
 import siteconfig from '../../../../../config/siteconfig.json';
 
 export default function ProfileBodyScreen({ user }){
+    const [values, setValues] = useState();
+    
     useEffect(()=>{
         getFields();
     }, []);
@@ -47,25 +48,22 @@ export default function ProfileBodyScreen({ user }){
                 </div>
             </div>
 
-            <form onSubmit={saveData}>
+            <form onSubmit={saveProfile}>
                 <div className='row d-flex justify-content-between'>
                     <div className='col-12 col-md-6'>
-                        <InputText label='Nome' name='name' icon='bi bi-person-fill' value={user.name} required />
+                        <InputText label='Nome' name='name' icon='bi bi-person-fill' value={user.name} required onChange={handleChange} />
                     </div>
 
                     <div className='col-12 col-md-6'>
-                        <InputEmail label='Email' name='email' icon='bi bi-envelope-fill' value={user.email} required disabled />
+                        <InputEmail label='Email' icon='bi bi-envelope-fill' value={user.email} required disabled onChange={handleChange} />
                     </div>
 
                     <div className='col-12 col-md-6'>
-                        <InputEmail label='Telefone' name='phone' icon='bi bi-phone-fill' value={user.phone} required />
+                        <InputText label='Telefone' name='phone' icon='bi bi-phone-fill' value={user.phone} required onChange={handleChange} />
                     </div>
 
                     <div className='col-12 col-md-6'>
-                        <InputSelect label='Permissões' name='permissions' icon='bi bi-file-earmark-lock-fill' options={{
-                            'admin': 'Admin',
-                            'user': 'Usuário'
-                        }} />
+                        <InputText label='Permições' icon='bi bi-phone-fill' value={user.permissions} required disabled onChange={handleChange} />
                     </div>
 
                     <div className='col-12 col-md-6'>
@@ -105,10 +103,28 @@ export default function ProfileBodyScreen({ user }){
             $('#repeatPassword').attr('required', true);
         }
 
+        if(event.target.name == 'phone'){
+
+            const telefone = removeCaracter(document.getElementById('phone').value);
+            const mascara = `(${telefone.substr(0, 2)}) ${telefone.substr(2, 1)} ${telefone.substr(3, 4)}-${telefone.substr(7, 4)}`;
+        
+            document.getElementById('phone').value = mascara;
+
+            function removeCaracter(phone){
+                let regex = /[^0-9]/gi;
+                phone = phone.replace(regex, '');
+                return phone;
+            }
+        }
+
         getFields();
     }
 
-    function saveData(event){
-
-    }; 
+    function saveProfile(event){
+        event.preventDefault();
+    
+        console.log(values)
+    
+        getFields();
+    }
 }
