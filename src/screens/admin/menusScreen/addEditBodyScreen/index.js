@@ -3,6 +3,7 @@ import InputText from "../../../../partials/form/inputText";
 import InputNumber from "../../../../partials/form/inputNumber";
 import { useEffect, useState } from "react";
 import { getFields } from "../../../../services/validitForm";
+import InputCheckboxSwitch from '../../../../partials/form/inputCheckboxSwitch';
 
 export default function AddEditBody(){
     const [values, setValues] = useState();
@@ -30,9 +31,13 @@ export default function AddEditBody(){
                     <div className='col-12 col-md-6'>
                         <InputNumber label='Posição' name='position' icon='bi bi-person-fill' value='' required onChange={handleChange} />
                     </div>
+
+                    <div className='col-12 col-md-6'>
+                        <InputCheckboxSwitch label='Exibir item na dashboard' name='view_dashboard' />
+                    </div>
                 </div>
 
-                <div className='row d-flex justify-content-end'>
+                <div className='row d-flex justify-content-end mt-3'>
                     <span>Os ícones ultilizados são do <a href="#" target='_blank' rel='noopener'>bootstrap icons</a>, copie a classe e cole no input do ícone do menu.</span>
 
                     <div className='col-12 col-md-3'>

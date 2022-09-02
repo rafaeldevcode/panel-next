@@ -42,7 +42,7 @@ export default function AddEditBody(){
                     </div>
 
                     <div className='col-12 col-md-6'>
-                        <InputPass label='Senha atual' name='password' required onChange={handleChange} />
+                        <InputPass label='Senha' name='password' required onChange={handleChange} />
                     </div>
                 </div>
 

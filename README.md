@@ -111,6 +111,8 @@ Este projeto está sob a licença (MIT) - veja o arquivo [LICENSE.md](https://gi
 * Conte a outras pessoas sobre este projeto 📢
 * Obrigado publicamente 🤓.
 
+## Idéias
+- Adicionar ícone de fundo das permições
 
 ---
 ⌨️ com ❤️ por [Rafael Vieira](https://github.com/rafaeldevcode) 😊
