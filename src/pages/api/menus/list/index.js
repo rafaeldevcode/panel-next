@@ -9,6 +9,7 @@ export default function handler(req, res) {
                             name: 'Dashboard',
                             slug: '/admin/dashboard',
                             icon: 'bi bi-speedometer',
+                            view_dashboard: false,
                             position: 1
                         },
                         1: {
@@ -16,6 +17,7 @@ export default function handler(req, res) {
                             name: "Usuários",
                             slug: "/admin/users",
                             icon: "bi bi-people-fill",
+                            view_dashboard: true,
                             position: 2
                         },
                         2: {
@@ -23,6 +25,7 @@ export default function handler(req, res) {
                             name: "Permissões",
                             slug: "/admin/permissions",
                             icon: "bi bi-file-earmark-lock-fill",
+                            view_dashboard: true,
                             position: 3
                         },
                         3: {
@@ -30,12 +33,14 @@ export default function handler(req, res) {
                             name: "Menus",
                             slug: "/admin/menus",
                             icon: "bi bi-menu-button-wide-fill",
+                            view_dashboard: true,
                             position: 4
                         },
                         4: {
                             id: 4,
                             name: "Notificações",
                             slug: "/admin/notifications",
+                            view_dashboard: true,
                             icon: "bi bi-bell-fill",
                             position: 5
                         },
@@ -44,6 +49,7 @@ export default function handler(req, res) {
                             name: "Configurações",
                             slug: "/admin/settings",
                             icon: "bi bi-gear-fill",
+                            view_dashboard: false,
                             position: 6
                         }
                     }

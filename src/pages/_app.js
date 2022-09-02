@@ -8,13 +8,13 @@ export default function MyApp({ Component, pageProps }) {
         <>
             <Head>
                 <link rel='stylesheet' href='/assets/css/style.css' />
-                <link rel='stylesheet' href='/assets/icons/bootstrap-icons.css' />
+                <link rel='stylesheet' href='/libs/bootstrap/bootstrap-icons.css' />
                 <link rel="icon" type={`image/${siteconfig.site.favicon.type}`} href={siteconfig.site.favicon.src}></link>
             </Head>
             <Component {...pageProps} /> 
             
-            <Script strategy='beforeInteractive' src='/assets/js/jquery.js' />
-            <Script strategy='beforeInteractive' src='/assets/js/bootstrap.js' />
+            <Script strategy='beforeInteractive' src='/libs/jquery/jquery.js' />
+            <Script strategy='beforeInteractive' src='/libs/bootstrap/bootstrap.js' />
         </>
     )
 }
