@@ -4,6 +4,7 @@ import TextArea from "../../../../partials/form/textArea";
 import { useEffect, useState } from "react";
 import { getFields } from "../../../../services/validitForm";
 import InputCheckboxSwitch from '../../../../partials/form/inputCheckboxSwitch';
+import Tinymce from "../../../../partials/tinymce";
 
 export default function AddEditBody(){
     const [values, setValues] = useState();
@@ -21,10 +22,11 @@ export default function AddEditBody(){
                     </div>
 
                     <div className='col-12'>
-                        <TextArea label='Notificação' name='notification' icon='bi bi-bell-fill' value='' required onChange={handleChange} />
+                        <Tinymce />
+                        {/* <TextArea label='Notificação' name='notification' icon='bi bi-bell-fill' value='' required onChange={handleChange} /> */}
                     </div>
 
-                    <div className='col-12 col-md-6'>
+                    <div className='col-12 col-md-6 mt-3'>
                         <InputCheckboxSwitch label='Ativar notificação' name='status' onChange={handleChange} />
                     </div>
                 </div>
