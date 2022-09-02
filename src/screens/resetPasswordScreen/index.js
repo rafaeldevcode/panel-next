@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import InputButton from "../../../partials/form/inputButton";
-import InputEmail from "../../../partials/form/inputEmail";
-import InputNumber from '../../../partials/form/inputNumber';
-import InputPass from '../../../partials/form/inputPass';
-import { createMessage } from "../../../services/createMessage";
-import { getFields } from "../../../services/validitForm";
-import MetasConfig from '../../../partials/MetasConfig';
+import InputButton from "../../partials/form/inputButton";
+import InputEmail from "../../partials/form/inputEmail";
+import InputNumber from '../../partials/form/inputNumber';
+import InputPass from '../../partials/form/inputPass';
+import { createMessage } from "../../services/createMessage";
+import { getFields } from "../../services/validitForm";
+import MetasConfig from '../../partials/MetasConfig';
 
 export default function ResetPasswordScreen(){ 
     const router = useRouter();

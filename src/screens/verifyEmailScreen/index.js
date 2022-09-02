@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { getFields } from "../../../services/validitForm";
-import { createMessage } from '../../../services/createMessage';
-import InputNumber from '../../../partials/form/inputNumber';
-import InputButton from '../../../partials/form/inputButton';
-import MetasConfig from '../../../partials/MetasConfig';
+import { getFields } from "../../services/validitForm";
+import { createMessage } from '../../services/createMessage';
+import InputNumber from '../../partials/form/inputNumber';
+import InputButton from '../../partials/form/inputButton';
+import MetasConfig from '../../partials/MetasConfig';
 
 export default function VerifyEmailScreen(){
     const router = useRouter();
@@ -49,7 +49,7 @@ export default function VerifyEmailScreen(){
         event.preventDefault();
 
         if(value.token === '123456'){
-            router.push('/admin/dashboard');
+            router.push('/dashboard');
         }else{
             createMessage('Token incorreto, verifique e tente novamente!', 'danger');
         }

@@ -1,16 +1,16 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { authService } from '../../../services/auth/authService';
-import { getFields } from "../../../services/validitForm";
+import { authService } from '../../services/auth/authService';
+import { getFields } from "../../services/validitForm";
 import Link from 'next/link';
-import BgLogin from "../../../partials/bgLogin";
-import Logo from "../../../partials/logo";
-import InputText from "../../../partials/form/inputText";
-import InputPass from "../../../partials/form/inputPass";
-import InputCheckboxSwitch from "../../../partials/form/inputCheckboxSwitch";
-import InputButton from "../../../partials/form/inputButton";
-import { createMessage } from "../../../services/createMessage";
-import MetasConfig from '../../../partials/MetasConfig';
+import BgLogin from "../../partials/bgLogin";
+import Logo from "../../partials/logo";
+import InputText from "../../partials/form/inputText";
+import InputPass from "../../partials/form/inputPass";
+import InputCheckboxSwitch from "../../partials/form/inputCheckboxSwitch";
+import InputButton from "../../partials/form/inputButton";
+import { createMessage } from "../../services/createMessage";
+import MetasConfig from '../../partials/MetasConfig';
 
 export default function LoginScreen(){
     const router = useRouter();
@@ -41,19 +41,19 @@ export default function LoginScreen(){
                             
                             <ul className='d-flex flex-nowrap justify-content-between ps-0'>
                                 <li>
-                                    <Link href="/admin/register" passHref>
+                                    <Link href="/register" passHref>
                                         <a className='text-cm-primary' title="Realizar cadastro">Realizar cadastro</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/admin/reset-password?insert=email" passHref>
+                                    <Link href="/reset-password?insert=email" passHref>
                                         <a className='text-cm-primary' title="Esqueci minha senha">Esqueci minha senha</a>
                                     </Link>
                                 </li>
                             </ul>
                         </div>
 
-                        <InputButton type='submit' title='Fazer login' value='Logar' style='cm-primary' />
+                        <InputButton type='submit' title='Realizar login' value='Logar' style='cm-primary' />
                     </form>
                 </div>
             </section>

@@ -1,16 +1,17 @@
 import Link from 'next/link';
-import BgLogin from '../../../partials/bgLogin';
-import Logo from '../../../partials/logo';
-import InputButton from '../../../partials/form/inputButton';
-import InputCheckboxSwitch from '../../../partials/form/inputCheckboxSwitch';
-import InputPass from '../../../partials/form/inputPass';
-import InputText from '../../../partials/form/inputText';
+import BgLogin from '../../partials/bgLogin';
+import Logo from '../../partials/logo';
+import InputButton from '../../partials/form/inputButton';
+import InputCheckboxSwitch from '../../partials/form/inputCheckboxSwitch';
+import InputPass from '../../partials/form/inputPass';
+import InputText from '../../partials/form/inputText';
 import { useEffect, useState } from 'react';
-import { getFields } from "../../../services/validitForm";
-import InputEmail from '../../../partials/form/inputEmail';
+import { getFields } from "../../services/validitForm";
+import InputEmail from '../../partials/form/inputEmail';
 import { useRouter } from "next/router";
-import { createMessage } from '../../../services/createMessage';
-import MetasConfig from '../../../partials/MetasConfig';
+import { createMessage } from '../../services/createMessage';
+import MetasConfig from '../../partials/MetasConfig';
+import LoginSocial from '../../partials/loginSocial';
 
 export default function RegisterScreen(){
     const router = useRouter();
@@ -45,31 +46,17 @@ export default function RegisterScreen(){
                             
                             <ul className='d-flex flex-nowrap justify-content-between ps-0'>
                                 <li>
-                                    <Link href="/admin/login" passHref>
+                                    <Link href="/login" passHref>
                                         <a className='text-cm-primary' title="Realizar login">Realizar login</a>
                                     </Link>
                                 </li>
                             </ul>
                         </div>
 
-                        <InputButton type='submit' title='Fazer cadastro' value='Registrar' style='cm-primary' />
+                        <InputButton type='submit' title='Realizar cadastro' value='Registrar' style='cm-primary' />
                     </form>
 
-                    <div className='col-12 col-sm-6'>
-                        <button title='Realizar login com Google' className='btn btn-md btn-ligth border border-primary col-12 mb-2 text-left position-relative ps-0'>
-                            <span className='position-absolute left-0 top-0 h-100 d-flex justify-content-center align-items-center px-2'>
-                                <i className="bi bi-google text-primary" />
-                            </span>
-                            Logar com google
-                        </button>
-
-                        <button title='Realizar login com Facebook' className='btn btn-md btn-primary border border-primary col-12 mb-2 text-left position-relative ps-0'>
-                            <span className='position-absolute left-0 top-0 h-100 d-flex justify-content-center align-items-center px-2'>
-                                <i className="bi bi-facebook text-light" />
-                            </span>
-                            Logar com facebook
-                        </button>
-                    </div>
+                    <LoginSocial />
                 </div>
             </section>
         </>
@@ -91,7 +78,7 @@ export default function RegisterScreen(){
         event.preventDefault();
 
         if(values.password === values.confirm_password){
-            router.push('/admin/verify-email');
+            router.push('/verify-email');
         }else{
             createMessage('As senhas não conferem, tente novamente!', 'danger');
         }
