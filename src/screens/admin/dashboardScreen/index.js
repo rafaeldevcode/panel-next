@@ -20,7 +20,7 @@ export default function DashboardScreen({ menus, notifications, user }){
                         <Breadcrumbs type='Visualizar' color='cm-secondary' title='Dashboard' icon='bi bi-speedometer' />
                     </section>
 
-                    <DashboardBodyScreen/>
+                    <DashboardBodyScreen menus={menus.menus} />
                 </section>
 
                 <Notifications notifications={notifications.notifications} />

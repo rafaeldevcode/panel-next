@@ -25,10 +25,10 @@ export default function AddEditBody({ menus }){
                         <div className='card p-3 col-md-4 col-12 col-lg-3 m-2' key={menus[key].id}>
                             <h2 className='fs-4'>{menus[key].name}</h2>
 
-                            <InputCheckboxSwitch label='Adicionar' name={`add_${menus[key].name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(' ', '-').toLowerCase()}`} onChange={handleChange} />
-                            <InputCheckboxSwitch label='Remover' name={`remove_${menus[key].name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(' ', '-').toLowerCase()}`} onChange={handleChange} />
-                            <InputCheckboxSwitch label='Visualizar' name={`browse_${menus[key].name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(' ', '-').toLowerCase()}`} onChange={handleChange} />
-                            <InputCheckboxSwitch label='Editar' name={`edit_${menus[key].name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(' ', '-').toLowerCase()}`} onChange={handleChange} />
+                            <InputCheckboxSwitch label='Adicionar' name={`add_${menus[key].prefix}`} onChange={handleChange} checked />
+                            <InputCheckboxSwitch label='Remover' name={`remove_${menus[key].prefix}`} onChange={handleChange} checked />
+                            <InputCheckboxSwitch label='Visualizar' name={`view_${menus[key].prefix}`} onChange={handleChange} checked />
+                            <InputCheckboxSwitch label='Editar' name={`edit_${menus[key].prefix}`} onChange={handleChange} checked />
                         </div>
                     ))}
                 </div>
