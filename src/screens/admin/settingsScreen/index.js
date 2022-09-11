@@ -4,6 +4,7 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
 import MetasConfig from '../../../partials/metasConfig';
+import SettingsBodyScreen from './settingsBodyScreen';
 
 export default function SettingsScreen({ menus, notifications, user }){
     return (
@@ -18,6 +19,8 @@ export default function SettingsScreen({ menus, notifications, user }){
                     <section className='p-3'>
                         <Breadcrumbs type='Editar' color='cm-primary' title='Configurações' icon='bi bi-gear-fill' />
                     </section>
+
+                    <SettingsBodyScreen />
                 </section>
 
                 <Notification notifications={notifications.notifications} />
