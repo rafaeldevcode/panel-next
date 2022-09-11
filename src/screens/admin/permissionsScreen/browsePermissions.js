@@ -4,7 +4,7 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
 import BrowseBody from './browseBodyScreen';
-import MetasConfig from '../../../partials/MetasConfig';
+import MetasConfig from '../../../partials/metasConfig';
 
 export default function BrowsePermissions({ permissions, menus, notifications, user }){
     const options = {

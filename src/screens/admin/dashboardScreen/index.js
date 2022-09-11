@@ -4,7 +4,7 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import DashboardBodyScreen from './dashboardBodyScreen';
 import Notifications from '../../../partials/notifications';
-import MetasConfig from '../../../partials/MetasConfig';
+import MetasConfig from '../../../partials/metasConfig';
 
 export default function DashboardScreen({ menus, notifications, user }){
     return (

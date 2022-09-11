@@ -4,7 +4,7 @@ import Header from "../../../partials/header";
 import Sidebar from "../../../partials/sidebar";
 import Notification from '../../../partials/notifications';
 import PrivacyBodyScreen from "./privacyBodyScreen";
-import MetasConfig from '../../../partials/MetasConfig';
+import MetasConfig from '../../../partials/metasConfig';
 
 export default function PrivacyScreen({ menus, notifications, user }){
     return (
