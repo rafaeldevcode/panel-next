@@ -10,7 +10,7 @@ import InputPass from "../../partials/form/inputPass";
 import InputCheckboxSwitch from "../../partials/form/inputCheckboxSwitch";
 import InputButton from "../../partials/form/inputButton";
 import { createMessage } from "../../services/createMessage";
-import MetasConfig from '../../partials/MetasConfig';
+import MetasConfig from '../../partials/metasConfig';
 
 export default function LoginScreen(){
     const router = useRouter();

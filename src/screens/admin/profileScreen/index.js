@@ -5,7 +5,7 @@ import Breadcrumbs from '../../../partials/breadcrumbs';
 import ModalImagesProfile from './partials/modalImagesProfile';
 import Notification from '../../../partials/notifications';
 import ProfileBodyScreen from './profileBodyScreen';
-import MetasConfig from '../../../partials/MetasConfig';
+import MetasConfig from '../../../partials/metasConfig';
 
 export default function ProfileScreen({ menus, notifications, user, permissions }){
     return (

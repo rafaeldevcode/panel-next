@@ -4,7 +4,7 @@ import Header from "../../../partials/header";
 import Sidebar from "../../../partials/sidebar";
 import Notification from '../../../partials/notifications';
 import TermsBodyScreen from "./termsBodyScreen";
-import MetasConfig from '../../../partials/MetasConfig';
+import MetasConfig from '../../../partials/metasConfig';
 
 export default function TermsScreen({ menus, notifications, user }){
     return (

@@ -1,7 +1,7 @@
 export async function getStaticProps(){
     return {
         redirect: {
-            destination: '/admin/login',
+            destination: '/login',
             permanent: false,
         }
     }

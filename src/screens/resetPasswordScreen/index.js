@@ -6,7 +6,7 @@ import InputNumber from '../../partials/form/inputNumber';
 import InputPass from '../../partials/form/inputPass';
 import { createMessage } from "../../services/createMessage";
 import { getFields } from "../../services/validitForm";
-import MetasConfig from '../../partials/MetasConfig';
+import MetasConfig from '../../partials/metasConfig';
 
 export default function ResetPasswordScreen(){ 
     const router = useRouter();

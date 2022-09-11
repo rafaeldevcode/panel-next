@@ -4,7 +4,7 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import Notification from '../../../partials/notifications';
 import AddEditBody from './addEditBodyScreen';
-import MetasConfig from '../../../partials/MetasConfig';
+import MetasConfig from '../../../partials/metasConfig';
 import breadconfig from '../../../../config/breadcrumps.json'
 
 export default function AddEditPermissions({ menus, notifications, user, type }){

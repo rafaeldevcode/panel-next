@@ -10,7 +10,7 @@ import { getFields } from "../../services/validitForm";
 import InputEmail from '../../partials/form/inputEmail';
 import { useRouter } from "next/router";
 import { createMessage } from '../../services/createMessage';
-import MetasConfig from '../../partials/MetasConfig';
+import MetasConfig from '../../partials/metasConfig';
 import LoginSocial from '../../partials/loginSocial';
 
 export default function RegisterScreen(){

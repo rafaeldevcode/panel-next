@@ -4,7 +4,7 @@ import { getFields } from "../../services/validitForm";
 import { createMessage } from '../../services/createMessage';
 import InputNumber from '../../partials/form/inputNumber';
 import InputButton from '../../partials/form/inputButton';
-import MetasConfig from '../../partials/MetasConfig';
+import MetasConfig from '../../partials/metasConfig';
 
 export default function VerifyEmailScreen(){
     const router = useRouter();

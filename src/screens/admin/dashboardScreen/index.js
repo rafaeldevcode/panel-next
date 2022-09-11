@@ -4,7 +4,7 @@ import Sidebar from '../../../partials/sidebar';
 import Breadcrumbs from '../../../partials/breadcrumbs';
 import DashboardBodyScreen from './dashboardBodyScreen';
 import Notifications from '../../../partials/notifications';
-import MetasConfig from '../../../partials/MetasConfig';
+import MetasConfig from '../../../partials/metasConfig';
 
 export default function DashboardScreen({ menus, notifications, user }){
     return (
@@ -20,7 +20,7 @@ export default function DashboardScreen({ menus, notifications, user }){
                         <Breadcrumbs type='Visualizar' color='cm-secondary' title='Dashboard' icon='bi bi-speedometer' />
                     </section>
 
-                    <DashboardBodyScreen/>
+                    <DashboardBodyScreen menus={menus.menus} />
                 </section>
 
                 <Notifications notifications={notifications.notifications} />
