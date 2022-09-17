@@ -276,5 +276,13 @@ input[type="checkbox"]
     &-span
         margin-top: -28px
 
+// Server error and not found pages custom
+.custom-404
+    @include pagesCustom('/assets/images/not_found.svg')
+
+.custom-500
+    @include pagesCustom('/assets/images/server_error.svg')
+    
+
 @import  ./_mediaQueries
 @import ./_keyFrames
