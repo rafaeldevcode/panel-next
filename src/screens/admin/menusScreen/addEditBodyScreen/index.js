@@ -36,7 +36,7 @@ export default function AddEditBody(){
                     <span>Os ícones ultilizados são do <a href="#" target='_blank' rel='noopener'>bootstrap icons</a>, copie a classe e cole no input do ícone do menu.</span>
 
                     <div className='col-12 col-md-3'>
-                        <InputButton type='submit' title='Salvar perfil' value='Salvar' style='cm-primary' />
+                        <InputButton type='submit' title='Salvar perfil' value='Salvar' style='color-main' />
                     </div>
                 </div>
             </form>

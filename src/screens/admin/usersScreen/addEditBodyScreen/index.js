@@ -48,7 +48,7 @@ export default function AddEditBody(){
 
                 <div className='row d-flex justify-content-end'>
                     <div className='col-12 col-md-3'>
-                        <InputButton type='submit' title='Salvar usuário' value='Salvar' style='cm-primary' />
+                        <InputButton type='submit' title='Salvar usuário' value='Salvar' style='color-main' />
                     </div>
                 </div>
             </form>

@@ -8,7 +8,7 @@ export default function TableFooter(){
                 </button>
 
                 <div className='d-flex'>
-                    <div className='px-2 me-1 border-top border-2 border-cm-primary'>
+                    <div className='px-2 me-1 border-top border-2 border-color-main'>
                         1
                     </div>
                     <div className='border-top border-2 border-cm-grey'>de 1 páginas</div>

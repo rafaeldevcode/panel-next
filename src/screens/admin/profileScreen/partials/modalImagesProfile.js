@@ -8,9 +8,9 @@ export default function ModalImagesProfile(){
     return (
         <div className='modal fade' id='imagesProfile' tabIndex='-1' aria-labelledby='imagesProfileLabel' aria-hidden='true'>
             <div className='modal-dialog modal-lg'>
-                <div className='modal-content border border-cm-primary'>
+                <div className='modal-content border border-color-main'>
                     <form>
-                        <div className='modal-header bg-cm-primary'>
+                        <div className='modal-header bg-color-main'>
                             <h5 className='modal-title text-cm-light' id='imagesProfileLabel'>Escolha uma imagem</h5>
                             <button title='Fechar modal' type='button' className='btn-close' data-bs-dismiss='modal' aria-label='Fechar' />
                         </div>
@@ -38,7 +38,7 @@ export default function ModalImagesProfile(){
                         </div>
                         
                         <div className="modal-footer p-2">
-                            <InputButton type='submit' title='Salvar configurações' value='Salvar' style='cm-primary' />
+                            <InputButton type='submit' title='Salvar configurações' value='Salvar' style='color-main' />
                         </div>
                     </form>
                 </div>

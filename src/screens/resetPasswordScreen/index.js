@@ -24,7 +24,7 @@ export default function ResetPasswordScreen(){
         <>
             <MetasConfig title='Resetar minha senha' />
             <section className='vw-100 vh-100 d-flex justify-content-center align-items-center p-3'>
-                <div className='border border-1 border-cm-primary rounded px-4 py-5 col-12 col-sm-8 col-md-6 shadow'>
+                <div className='border border-1 border-color-main rounded px-4 py-5 col-12 col-sm-8 col-md-6 shadow'>
                     {isEmail && <form onSubmit={sendEmail}>
                         <h1 className='text-center fs-3'>Por favor informe seu email</h1>
 
@@ -53,7 +53,7 @@ export default function ResetPasswordScreen(){
                         <InputPass label='Confirme sua senha' required name='confirm_password' onChange={handleChange} />
 
                         <div className='py-2 col-12 d-flex justify-content-end'>
-                            <InputButton type='submit' title='Redefinir senha' value='Verificar' style='cm-primary' />
+                            <InputButton type='submit' title='Redefinir senha' value='Verificar' style='color-main' />
                         </div>
                     </form>}
                 </div>

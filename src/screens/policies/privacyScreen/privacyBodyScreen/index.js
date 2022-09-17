@@ -4,7 +4,7 @@ export default function PrivacyBodyScreen(){
     return (
         <article className='p-5 m-3 bg-cm-grey shadow'>
             <div>
-                <p>A sua privacidade é importante para nós. É política do <b className='text-cm-primary'>{siteconfig.site.name}</b> respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <b className='text-cm-primary'>{siteconfig.site.name}</b>, e outros sites que possuímos e operamos.</p>
+                <p>A sua privacidade é importante para nós. É política do <b className='text-color-main'>{siteconfig.site.name}</b> respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <b className='text-color-main'>{siteconfig.site.name}</b>, e outros sites que possuímos e operamos.</p>
     
                 <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
 
@@ -36,31 +36,31 @@ export default function PrivacyBodyScreen(){
 
                 <ul className='cm-list'>
                     <li>
-                        <b className='text-cm-primary'>Cookies relacionados à conta</b>
+                        <b className='text-color-main'>Cookies relacionados à conta</b>
 
                         <p>Se você criar uma conta connosco, usaremos cookies para o gerenciamento do processo de inscrição e administração geral. Esses cookies geralmente serão excluídos quando você sair do sistema, porém, em alguns casos, eles poderão permanecer posteriormente para lembrar as preferências do seu site ao sair.</p>
                     </li>
 
                     <li>
-                        <b className='text-cm-primary'>Cookies relacionados ao login</b>
+                        <b className='text-color-main'>Cookies relacionados ao login</b>
 
                         <p>Este site oferece facilidades de comércio eletrônico ou pagamento e alguns cookies são essenciais para garantir que seu pedido seja lembrado entre as páginas, para que possamos processá-lo adequadamente.</p>
                     </li>
 
                     <li>
-                        <b className='text-cm-primary'>Cookies relacionados a pesquisas</b>
+                        <b className='text-color-main'>Cookies relacionados a pesquisas</b>
 
                         <p>Periodicamente, oferecemos pesquisas e questionários para fornecer informações interessantes, ferramentas úteis ou para entender nossa base de usuários com mais precisão. Essas pesquisas podem usar cookies para lembrar quem já participou numa pesquisa ou para fornecer resultados precisos após a alteração das páginas.</p>
                     </li>
 
                     <li>
-                        <b className='text-cm-primary'>Cookies relacionados a formulários</b>
+                        <b className='text-color-main'>Cookies relacionados a formulários</b>
 
                         <p>Quando você envia dados por meio de um formulário como os encontrados nas páginas de contacto ou nos formulários de comentários, os cookies podem ser configurados para lembrar os detalhes do usuário para correspondência futura.</p>
                     </li>
 
                     <li>
-                        <b className='text-cm-primary'>Cookies de preferências do site</b>
+                        <b className='text-color-main'>Cookies de preferências do site</b>
 
                         <p>Para proporcionar uma ótima experiência neste site, fornecemos a funcionalidade para definir suas preferências de como esse site é executado quando você o usa. Para lembrar suas preferências, precisamos definir cookies para que essas informações possam ser chamadas sempre que você interagir com uma página for afetada por suas preferências.</p>
                     </li>
@@ -84,12 +84,12 @@ export default function PrivacyBodyScreen(){
 
                 <h5>Compromisso do Usuário</h5>
 
-                <p>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o <b className='text-cm-primary'>{siteconfig.site.name}</b> oferece no site e com caráter enunciativo, mas não limitativo:</p>
+                <p>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o <b className='text-color-main'>{siteconfig.site.name}</b> oferece no site e com caráter enunciativo, mas não limitativo:</p>
 
                 <ul className='cm-list'>
                     <li>A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</li>
                     <li>B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, betano ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</li>
-                    <li>C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do <b className='text-cm-primary'>{siteconfig.site.name}</b>, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</li>
+                    <li>C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do <b className='text-color-main'>{siteconfig.site.name}</b>, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</li>
                 </ul>
 
                 <h5>Mais informações</h5>

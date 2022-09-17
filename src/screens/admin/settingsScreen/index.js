@@ -17,7 +17,7 @@ export default function SettingsScreen({ menus, notifications, user }){
                     <Header />
 
                     <section className='p-3'>
-                        <Breadcrumbs type='Editar' color='cm-primary' title='Configurações' icon='bi bi-gear-fill' />
+                        <Breadcrumbs type='Editar' color='color-main' title='Configurações' icon='bi bi-gear-fill' />
                     </section>
 
                     <SettingsBodyScreen />

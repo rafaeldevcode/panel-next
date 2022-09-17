@@ -16,7 +16,7 @@ export default function Profile({ user }){
                             layout='responsive'
                             placeholder='blur'
                             blurDataURL='/assets/images/default.png'
-                            className='border border-cm-primary'
+                            className='border border-color-main'
                         />
                     </a>
                 </Link>

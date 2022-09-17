@@ -42,18 +42,18 @@ export default function LoginScreen(){
                             <ul className='d-flex flex-nowrap justify-content-between ps-0'>
                                 <li>
                                     <Link href="/register" passHref>
-                                        <a className='text-cm-primary' title="Realizar cadastro">Realizar cadastro</a>
+                                        <a className='text-color-main' title="Realizar cadastro">Realizar cadastro</a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/reset-password?insert=email" passHref>
-                                        <a className='text-cm-primary' title="Esqueci minha senha">Esqueci minha senha</a>
+                                        <a className='text-color-main' title="Esqueci minha senha">Esqueci minha senha</a>
                                     </Link>
                                 </li>
                             </ul>
                         </div>
 
-                        <InputButton type='submit' title='Realizar login' value='Logar' style='cm-primary' />
+                        <InputButton type='submit' title='Realizar login' value='Logar' style='color-main' />
                     </form>
                 </div>
             </section>
