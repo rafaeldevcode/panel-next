@@ -12,7 +12,7 @@ export default function Sidebar({ menus, user }){
                     <ul className='m-0 p-2'>
                         {Object.keys(menus).map((key)=>(
                             <li className='d-flex flex-row align-items-center rounded itemNavSidbar' key={menus[key].id}>
-                                <div className='nav-icon text-cm-primary text-center w-100'>
+                                <div className='nav-icon text-color-main text-center w-100'>
                                     <Link href={menus[key].slug} passHref>
                                         <a title={menus[key].name} className='text-decoration-none d-block fw-bold text-cm-light'>
                                             <div className='d-flex align-items-center w-100'>

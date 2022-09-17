@@ -18,14 +18,14 @@ export default function VerifyEmailScreen(){
         <>
             <MetasConfig title='Confirmar email' />
             <section className='vw-100 vh-100 d-flex justify-content-center align-items-center p-3'>
-                <div className='border border-1 border-cm-primary rounded px-4 py-5 col-12 col-sm-8 col-md-6 shadow'>
+                <div className='border border-1 border-color-main rounded px-4 py-5 col-12 col-sm-8 col-md-6 shadow'>
                     <form onSubmit={verifyEmail}>
                         <h1 className='text-center fs-3'>Enviamos um token de verificação para seu email.</h1>
 
                         <InputNumber label='Token de verificação' name='token' icon='bi bi-key-fill' required onChange={handleChange} />
 
                         <div className='col-12 d-flex justify-content-end'>
-                            <InputButton type='submit' title='Verificar email' value='Verificar' style='cm-primary' />
+                            <InputButton type='submit' title='Verificar email' value='Verificar' style='color-main' />
                         </div>
                     </form>
                 </div>

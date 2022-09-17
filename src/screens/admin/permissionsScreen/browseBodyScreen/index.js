@@ -34,7 +34,7 @@ export default function BrowseBody({ permissions }){
                             <td>{permissions[key].permission}</td>
                             <td>
                                 <Link href={`/admin/permissions/edit/${permissions[key].id}`} passHref>
-                                    <a title={`Editar permição ${permissions[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold m-1'>
+                                    <a title={`Editar permição ${permissions[key].name}`} className='btn btn-sm btn-color-main text-cm-light fw-bold m-1'>
                                         <i className='bi bi-pencil-square' />
                                     </a>
                                 </Link>

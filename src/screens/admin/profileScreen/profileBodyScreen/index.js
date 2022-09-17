@@ -24,7 +24,7 @@ export default function ProfileBodyScreen({ user }){
 
                 <div className='mx-auto position-relative profile-user'>
                     <Image 
-                        className='border border-cm-primary'
+                        className='border border-color-main'
                         src={user.photo}
                         alt={user.name}
                         width={137}
@@ -39,11 +39,11 @@ export default function ProfileBodyScreen({ user }){
                         data-bs-toggle="modal" 
                         data-bs-target="#imagesProfile"
                     >
-                        <span className='text-cm-primary fw-bold'>Alterar</span>
+                        <span className='text-color-main fw-bold'>Alterar</span>
                     </button>
                 </div>
                 
-                <div className='position-absolute top-0 start-0 m-3 text-cm-primary fw-bold display-4'>
+                <div className='position-absolute top-0 start-0 m-3 text-color-main fw-bold display-4'>
                     {user.name}
                 </div>
             </div>
@@ -85,7 +85,7 @@ export default function ProfileBodyScreen({ user }){
 
                 <div className='row d-flex justify-content-end'>
                     <div className='col-12 col-md-3'>
-                        <InputButton type='submit' title='Salvar perfil' value='Salvar' style='cm-primary' />
+                        <InputButton type='submit' title='Salvar perfil' value='Salvar' style='color-main' />
                     </div>
                 </div>
             </form>

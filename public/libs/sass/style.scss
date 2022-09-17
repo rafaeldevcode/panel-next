@@ -1,5 +1,5 @@
 // Variaveis originais do bootstrap
-$primary : #0D6EFD;
+$primary : #0066ff;
 $secondary : #6C757D;
 $success : #198754;
 $info : #0DCAF0;
@@ -21,7 +21,8 @@ $theme-colors: (
 );
 
 // Variaveis customizadas
-$cm-primary : #3695FF;
+$color-main : #3695FF;
+$cm-primary : #0077ff;
 $cm-secondary : #6C757D;
 $cm-success : #008000;
 $cm-info : #0DCAF0;
@@ -33,6 +34,7 @@ $cm-grey : #f4f4f4;
 
 // Tema com cores pesonalizadas
 $custom-colors: (
+  "color-main":    $color-main,
   "cm-primary":    $cm-primary,
   "cm-secondary":  $cm-secondary,
   "cm-success":    $cm-success,

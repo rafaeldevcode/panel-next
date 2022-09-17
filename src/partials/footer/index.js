@@ -13,7 +13,7 @@ export default function Footer(){
                     <ul className='d-flex flex-row m-0 p-0'>
                         <li>
                             <Link href='/policies/privacy' passHref>
-                                <a className='text-decoration-none fw-bold text-cm-primary'>
+                                <a className='text-decoration-none fw-bold text-color-main'>
                                     Politícas de Privacidade
                                 </a>
                             </Link>
@@ -21,7 +21,7 @@ export default function Footer(){
                         <li className='mx-2'>|</li>
                         <li>
                             <Link href='/policies/terms' passHref>
-                                <a className='text-decoration-none fw-bold text-cm-primary'>
+                                <a className='text-decoration-none fw-bold text-color-main'>
                                     Temos de Uso
                                 </a>
                             </Link>

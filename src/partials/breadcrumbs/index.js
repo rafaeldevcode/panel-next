@@ -22,7 +22,9 @@ export default function Breadcrumbs({ type, color, title, icon, options }){
                 </div>
 
                 <div className='d-flex frex-nowrap align-items-center mb-2'>
-                    <i className={`${icon} text-cm-secondary display-6 me-2`} />
+                    <span className='bg-color-main rounded px-1 me-2'>
+                        <i className={`${icon} text-cm-light display-6`} />
+                    </span>
                     <p className='display-5 fw-bold text-cm-secondary mb-0'>{title}</p>
                 </div>
             </div>
@@ -32,7 +34,7 @@ export default function Breadcrumbs({ type, color, title, icon, options }){
 
                 <div className='d-flex justify-content-center'>
                     {options.add && <Link href={options.add.href} passHref>
-                        <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary me-1 text-cm-light'>Adicionar</a>
+                        <a title={`Adicionar ${title}`} className='btn btn-md btn-color-main me-1 text-cm-light'>Adicionar</a>
                     </Link>}
 
                     {options.delete && <button onClick={deleteAllItems} id='deleteAll' type='button' title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>

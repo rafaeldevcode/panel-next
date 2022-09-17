@@ -35,7 +35,7 @@ export default function AddEditBody({ menus }){
 
                 <div className='row d-flex justify-content-end'>
                     <div className='col-12 col-md-3'>
-                        <InputButton type='submit' title='Salvar perfil' value='Salvar' style='cm-primary' />
+                        <InputButton type='submit' title='Salvar perfil' value='Salvar' style='color-main' />
                     </div>
                 </div>
             </form>

@@ -4,7 +4,7 @@ import Menu from '../menu';
 
 export default function Header(){
     return (
-        <header className='bg-cm-primary d-flex align-item-center w-100 p-2 shadow header'>
+        <header className='bg-color-main d-flex align-item-center w-100 p-2 shadow header'>
             <div className='d-flex justify-content-between align-items-center w-100'>
                 <Menu />
 

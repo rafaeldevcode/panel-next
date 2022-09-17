@@ -47,13 +47,13 @@ export default function RegisterScreen(){
                             <ul className='d-flex flex-nowrap justify-content-between ps-0'>
                                 <li>
                                     <Link href="/login" passHref>
-                                        <a className='text-cm-primary' title="Realizar login">Realizar login</a>
+                                        <a className='text-color-main' title="Realizar login">Realizar login</a>
                                     </Link>
                                 </li>
                             </ul>
                         </div>
 
-                        <InputButton type='submit' title='Realizar cadastro' value='Registrar' style='cm-primary' />
+                        <InputButton type='submit' title='Realizar cadastro' value='Registrar' style='color-main' />
                     </form>
 
                     <LoginSocial />
