@@ -22,7 +22,9 @@ export default function Breadcrumbs({ type, color, title, icon, options }){
                 </div>
 
                 <div className='d-flex frex-nowrap align-items-center mb-2'>
-                    <i className={`${icon} text-cm-secondary display-6 me-2`} />
+                    <span className='bg-cm-primary rounded px-1 me-2'>
+                        <i className={`${icon} text-cm-light display-6`} />
+                    </span>
                     <p className='display-5 fw-bold text-cm-secondary mb-0'>{title}</p>
                 </div>
             </div>
