@@ -1,6 +1,6 @@
 export const createMessage = ( messageText, typeMessage ) => {
     const div = $('<div />');
-        div.attr('class', `position-fixed end-0 top-0 m-2 p-2 border border-${typeMessage} border-4 rounded shadow`);
+        div.attr('class', `position-fixed end-0 top-0 m-2 p-2 border border-${typeMessage} border-2 rounded shadow`);
         div.attr('data-message', 'true');
 
     const message = $('<p />');

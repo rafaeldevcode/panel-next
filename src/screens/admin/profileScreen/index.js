@@ -18,7 +18,7 @@ export default function ProfileScreen({ menus, notifications, user, permissions 
                     <Header />
 
                     <section className='p-3'>
-                        <Breadcrumbs type='Editar' color='color-main' title='Perfil' icon='bi bi-person-bounding-box' />
+                        <Breadcrumbs type='Editar' color='cm-primary' title='Perfil' icon='bi bi-person-bounding-box' />
                     </section>
 
                     <ProfileBodyScreen user={user} />

@@ -14,7 +14,7 @@ export default function Breadcrumbs({ type, color, title, icon, options }){
             <div>
                 <div>
                     <ul className='p-0 d-flex flex-nowrap text-cm-secondary'>
-                        <li className='mx-2'><span className={`badge bg-${color} rounded-fill`}>{type}</span></li>
+                        <li className='me-2'><span className={`badge bg-${color} rounded-fill`}>{type}</span></li>
                         {pathName.map((path, key)=>(
                             <li key={key} className='mx-2' dangerouslySetInnerHTML={{__html: `&gt;&emsp;${path}`}} />
                         ))}
@@ -33,15 +33,33 @@ export default function Breadcrumbs({ type, color, title, icon, options }){
                 {options.search && <InputSearch />}
 
                 <div className='d-flex justify-content-center'>
-                    {options.add && <Link href={options.add.href} passHref>
-                        <a title={`Adicionar ${title}`} className='btn btn-md btn-color-main me-1 text-cm-light'>Adicionar</a>
-                    </Link>}
-
-                    {options.delete && <button onClick={deleteAllItems} id='deleteAll' type='button' title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger ms-1 disabled text-cm-light'>
+                    {options.delete && <button onClick={deleteAllItems} id='deleteAll' type='button' title={`Remover vários(a) ${title}`} className='btn btn-md btn-cm-danger me-1 disabled text-cm-light'>
                         Remover
                     </button>}
+
+                    {options.add && <Link href={options.add.href} passHref>
+                        <a title={`Adicionar ${title}`} className='btn btn-md btn-cm-primary mx-1 text-cm-light'>Adicionar</a>
+                    </Link>}
+
+                    <Link href='#' passHref>
+                        <a onClick={backPrevious} title='Voltar a página anterior' className='btn btn-md btn-cm-info mx-1 text-cm-light'>Voltar</a>
+                    </Link>
+                </div>
+            </div>}
+
+            {!options && <div className='d-flex flex-column flex-sm-row mb-3 mx-auto mx-md-0'>
+                <div className='d-flex justify-content-center'>
+                    <Link href='#' passHref>
+                        <a onClick={backPrevious} title='Voltar a página anterior' className='btn btn-md btn-cm-info mx-1 text-cm-light'>Voltar</a>
+                    </Link>
                 </div>
             </div>}
         </div>
-    )
+    );
+
+    function backPrevious(event){
+        event.preventDefault();
+
+        history.back();
+    }
 }
