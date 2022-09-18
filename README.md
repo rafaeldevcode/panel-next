@@ -55,7 +55,7 @@ Antes de começar certifique de ter o Node JS instalado em sua máquina com vers
 - webpack-cli        => 4.10.0 ou mais
 
 ## ⚙ Desenvolvimento
-Este projeto utiliza o [Laravel Mix]() e [Webpack]() para poder transferir os arquivos js, css, fonts e etc... de plugins para o dirrtório público do projeto, tornado assim mais fácil o gerenciamento desses arquivos e um memlhor aproveitamento do recusrsos do [Bootstrap]().
+Este projeto utiliza o [Laravel Mix](https://laravel-mix.com/docs/6.0/installation) e [Webpack](https://webpack.js.org/concepts/) para poder transferir os arquivos js, css, fonts e etc... de plugins para o dirrtório público do projeto, tornado assim mais fácil o gerenciamento desses arquivos e um memlhor aproveitamento do recusrsos do [Bootstrap](https://getbootstrap.com/).
 
 ##### Oque você pode fazer
 - Transferir arquivos de node_modules para o diretório público.
@@ -137,16 +137,16 @@ Este projeto está sob a licença (MIT) - veja o arquivo [LICENSE.md](https://gi
 * Obrigado publicamente 🤓.
 
 ## 🔗 Links úteis
-* [Documentação Sass](https://sass-lang.com/documentation/)
-* [Documentação Next JS](https://nextjs.org/docs)
-* [Bootstrap Icons](https://icons.getbootstrap.com/)
-* [Documentação Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
-* [Documentação JQuery](https://api.jquery.com/)
-* [Documentação Tinymce](https://www.tiny.cloud/docs/tinymce/6/)
-* [Nookies](https://github.com/maticzav/nookies)
-* [Documentação React](https://pt-br.reactjs.org/docs/getting-started.html)
-* [Documentação Laravel Mix](https://laravel-mix.com/docs/6.0/installation)
-* [Documentação Webpack](https://webpack.js.org/concepts/)
+- [Documentação Sass](https://sass-lang.com/documentation/)
+- [Documentação Next JS](https://nextjs.org/docs)
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [Documentação Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+- [Documentação JQuery](https://api.jquery.com/)
+- [Documentação Tinymce](https://www.tiny.cloud/docs/tinymce/6/)
+- [Nookies](https://github.com/maticzav/nookies)
+- [Documentação React](https://pt-br.reactjs.org/docs/getting-started.html)
+- [Documentação Laravel Mix](https://laravel-mix.com/docs/6.0/installation)
+- [Documentação Webpack](https://webpack.js.org/concepts/)
 
 ---
 ⌨️ com ❤️ por [Rafael Vieira](https://github.com/rafaeldevcode) 😊
