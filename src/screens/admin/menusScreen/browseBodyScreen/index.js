@@ -49,7 +49,7 @@ export default function BrowseBodyScreen({ menus }){
                             <td data-col='position'>{menus[key].position}</td>
                             <td>
                                 <Link href={`/admin/menus/edit/${menus[key].id}`} passHref>
-                                    <a title={`Editar item ${menus[key].name} do menu`} className='btn btn-sm btn-color-main text-cm-light fw-bold m-1'>
+                                    <a title={`Editar item ${menus[key].name} do menu`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold m-1'>
                                         <i className='bi bi-pencil-square' />
                                     </a>
                                 </Link>

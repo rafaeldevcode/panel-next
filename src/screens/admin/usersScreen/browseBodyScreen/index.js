@@ -56,7 +56,7 @@ export default function BrowseBodyScreen({ users }){
                             <td data-col='email'>{users[key].email}</td>
                             <td>
                                 <Link href={`/admin/users/edit/${users[key].id}`} passHref>
-                                    <a title={`Editar usuário ${users[key].name}`} className='btn btn-sm btn-color-main text-cm-light fw-bold m-1'>
+                                    <a title={`Editar usuário ${users[key].name}`} className='btn btn-sm btn-cm-primary text-cm-light fw-bold m-1'>
                                         <i className='bi bi-pencil-square' />
                                     </a>
                                 </Link>
