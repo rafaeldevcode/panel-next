@@ -1,118 +1,152 @@
-# Painel de login com Next JS
+# Painel de login e dashboard com Next JS
+<div align="center">
+    <img src='https://github.com/rafaeldevcode/panel-next/blob/main/public/assets/images/logo.png' width="300" >
+</div>
 
-Um parágrafo da descrição do projeto vai aqui
+Este projeto foi desenvolvido com o intuito de ampliar meu conecimento em Next JS e também já possuir uma estrutura base para projetos futuros, obtento assim mais agilidade.
 
 ## 🚀 Começando
+Antes de começar certifique de ter o Node JS instalado em sua máquina com versão 16 ou superior.
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
-
-Consulte **Implantação** para saber como implantar o projeto.
-
-### 📋 Pré-requisitos
-
-De que coisas você precisa para instalar o software e como instalá-lo?
-
+## 📋 Pré-requisitos
 - Node JS Versão 16 ou mais
 
-### 🔧 Instalação
+## 🔧 Instalação
+ - Primeiro passo é baixar o projeto fazendo dawnload do arquivo zip, ou usando o comando abaixo:
+ ```
+    git clone https://github.com/rafaeldevcode/panel-next.git
+ ```
 
-### Dependências
+ - Depois do projeo ter sido clonado naveque até o diretório criado e instale as dependências:
+ ```
+    npm install
+ ```
 
-- bootstrap        => 5.1.3 ou mais;
-- next             => 12.1.0 ou mais;
-- react            => 17.0.2 ou mais;
-- react-dom        => 17.0.2 ou mais;
-- sass             => 1.52.3 ou mais;
-- bcrypt           => 5.0.1 ou mais;
-- jsonwebtoken     => 8.5.1 ou mais;
-- nedb             => 1.8.0 ou mais;
-- next-swagger-doc => 0.2.0 ou mais;
-- nookies          => 2.5.2 ou mais;
-- swagger-ui-react => 4.5.2 ou mais;
-- uuid             => 8.3.2 ou mais;
+ - Rodar aplicação em modo develope:
+ ```
+    npm run dev
+ ```
 
-### Dependências de desenvolvimento
+ - Simular ambiente de produção:
+ ```
+    npm run build
+ ```
+ ```
+    npm start
+ ```
+ 
+## 🖇 Dependências
+- @tinymce/tinymce-react => 4.2.0 ou mais
+- bootstrap              => 5.1.3 ou mais
+- bootstrap-icons        => 1.8.3 ou mais
+- jquery                 => 3.6.0 ou mais
+- next                   => 12.1.0 ou mais
+- nookies                => 2.5.2 ou mais
+- react                  => 17.0.2 ou mais
+- react-dom              => 17.0.2 ou mais
+- sass                   => 1.52.3 ou mais
 
-- laravel-mix 6.0.49 => ou mais;
-- resolve-url-loader => 5.0.0 ou mais;
-- sass               => 1.52.3 ou mais;
-- sass-loader        => 12.1.0 ou mais;
-- webpack            => 5.73.0 ou mais;
-- webpack-cli        => 4.10.0 ou mais;
+## 🖇 Dependências de desenvolvimento
+- laravel-mix        => 6.0.49 ou mais
+- resolve-url-loader => 5.0.0 ou mais
+- sass               => 1.52.3 ou mais
+- sass-loader        => 12.1.0 ou mais
+- webpack            => 5.73.0 ou mais
+- webpack-cli        => 4.10.0 ou mais
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+## ⚙ Desenvolvimento
+Este projeto utiliza o [Laravel Mix]() e [Webpack]() para poder transferir os arquivos js, css, fonts e etc... de plugins para o dirrtório público do projeto, tornado assim mais fácil o gerenciamento desses arquivos e um memlhor aproveitamento do recusrsos do [Bootstrap]().
 
-Diga como essa etapa será:
+##### Oque você pode fazer
+- Transferir arquivos de node_modules para o diretório público.
+    - Identifique o arquivo [webpack.mix.js](https://github.com/rafaeldevcode/panel-next/blob/main/webpack.mix.js), e adicione o caminho original do arquivo para o caminho que deseja adicionar o arquivo, sempre especificando o tipo de arquivo de destino, EX:
+        - Javascript:
+        ```
+            scripts('caminho original do arquivo', 'caminho de destino')
+        ```
+        - CSS:
+        ```
+            css('caminho original do arquivo', 'caminho de destino')
+        ```
 
-```
-Dar exemplos
-```
+        ###### Para mais informações consulte a sessão de links úteis no final do arquivo.
 
-E repita:
+    - Depois das alterações feitas rodar o comando:
+    ```
+        npm run mix
+    ```
 
-```
-Até finalizar
-```
+- Alterar as variaveis sass do Bootstrap:
+    - Identifique o arquivo [style.scss](https://github.com/rafaeldevcode/panel-next/blob/main/public/libs/sass/style.scss), e faça as alterações que deseja deixando sempre o '@import  "~bootstrap/scss/bootstrap"', no final do arquivo.
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+    - Depois das alterações feitas rodar o comando:
+    ```
+        npm run mix
+    ```
 
-## ⚙️ Executando os testes
+- Alterar a cor principal do projeto:
+    - Identifique os sequintes arquivos 
+        - [style.scss](https://github.com/rafaeldevcode/panel-next/blob/main/public/libs/sass/style.scss);
+        - [_variables.sass](https://github.com/rafaeldevcode/panel-next/blob/main/src/styles/_variables.sass)
+        
+    - E altere o valor da variável '$color-main', para q cor que deseja.
 
-Explicar como executar os testes automatizados para este sistema.
+    - Depois das alterações feitas rodar o comando:
+    ```
+        npm run mix
+    ```
 
-### 🔩 Analise os testes de ponta a ponta
 
-Explique que eles verificam esses testes e porquê.
+## 📦 Produção
+Para subir esse projeto em produção reocomendo utilizar a [Vercer](https://vercel.com/), vantagens:
+- Por ser a empresa responsável por criar e manter o Next
+- Já entrega seu site para DNSs espalhados pelo mundo
+- 0 configurações com servidores, basta se conectar ultilizando git
+- Versão gratuita com até 3 sites
 
-```
-Dar exemplos
-```
+Mas caso opte por não ultilizar a vercel, e caso sua ospedagem não tenha um pacote de instalaçõa com Node JS, você deverá instalar um gerenciador de aplicação Node,
+Aqui vou rocomendar o [PM2](https://pm2.keymetrics.io/):
+- Documentação => https://pm2.keymetrics.io/docs/usage/quick-start/
+   - Acessar o servidor via terminal instalar as dependências:
+    ```
+        npm install
+    ```
 
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Desenvolvimento
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+   - Buildar a aplicação:
+    ```
+        npm run build
+    ```
+    - Executar o PM2
 
 ## 🛠️ Construído com
-
-Mencione as ferramentas que você usou para criar seu projeto
-
-* [Next JS](https://nextjs.org/docs) - Fremework
-* [Next Swagger](https://www.npmjs.com/package/next-swagger-doc) - API
+* [HTML](https://html.com/) - Linguagem de marcação
+* [Bootstrap](https://getbootstrap.com/) - Estilização
+* [Java Script](https://www.javascript.com/) - Linguagem
+* [Next JS](https://nextjs.org/docs) - Fremework para front-end
 * [Git](https://git-scm.com/doc) - Gerenciador de versão
 
-<!-- ## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação. -->
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
-
 ## ✒️ Autores
-
-* **Rafael Vieira** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/rafaeldevcode)
-
-<!-- Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto. -->
+* **Rafael Vieira** - *Trabalho Inicial* 
+    - [Github Principal](https://github.com/rafaeldevcode) 
 
 ## 📄 Licença
-
-Este projeto está sob a licença (MIT) - veja o arquivo [LICENSE.md](https://github.com/rafaeldevcode/painel-login-next/licenca) para detalhes.
+Este projeto está sob a licença (MIT) - veja o arquivo [LICENSE.md](https://github.com/rafaeldevcode/panel-next/blob/main/LICENCE.md) para detalhes.
 
 ## 🎁 Expressões de gratidão
-
 * Conte a outras pessoas sobre este projeto 📢
 * Obrigado publicamente 🤓.
 
-## Idéias
-- Adicionar ícone de fundo das permições
+## 🔗 Links úteis
+* [Documentação Sass](https://sass-lang.com/documentation/)
+* [Documentação Next JS](https://nextjs.org/docs)
+* [Bootstrap Icons](https://icons.getbootstrap.com/)
+* [Documentação Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+* [Documentação JQuery](https://api.jquery.com/)
+* [Documentação Tinymce](https://www.tiny.cloud/docs/tinymce/6/)
+* [Nookies](https://github.com/maticzav/nookies)
+* [Documentação React](https://pt-br.reactjs.org/docs/getting-started.html)
+* [Documentação Laravel Mix](https://laravel-mix.com/docs/6.0/installation)
+* [Documentação Webpack](https://webpack.js.org/concepts/)
 
 ---
 ⌨️ com ❤️ por [Rafael Vieira](https://github.com/rafaeldevcode) 😊
